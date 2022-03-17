@@ -28,6 +28,9 @@ __Liste des colonnes__
 
 Explorer les résultats de l'équipe de suisse pendant la période de 1872 à 2021.
 
+![wireframe](img/wireframe.jpg)
+
+
 ## Références
 
 Malgré le nombre de téléchargement dépassant les 48000, nous ne savons pas ce que les utilisateurs font de ces données.
