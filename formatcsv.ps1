@@ -1,5 +1,5 @@
 #!bin/pwsh
-$matchs = import-csv -Path ./results2.csv -Delimiter ","
+$matchs = import-csv -Path ./rawdata.csv -Delimiter ","
 $victory = 0
 $defeat = 0
 $egality = 0
