@@ -1,5 +1,5 @@
 
-function compteur(valeur = 100) {
+function counter() {
     var COUNT_FRAMERATE, COUNT_MS_PER_FRAME, DIGIT_FORMAT, DIGIT_HTML, DIGIT_SPEEDBOOST, DURATION, FORMAT_MARK_HTML, FORMAT_PARSER, FRAMERATE, FRAMES_PER_VALUE, MS_PER_FRAME, MutationObserver, Odometer, RIBBON_HTML, TRANSITION_END_EVENTS, TRANSITION_SUPPORT, VALUE_HTML, addClass, createFromHTML, fractionalPart, now, removeClass, requestAnimationFrame, round, transitionCheckStyles, trigger, truncate, wrapJQuery, _jQueryWrapped, _old, _ref, _ref1,
       __slice = [].slice;
   
@@ -654,14 +654,14 @@ function compteur(valeur = 100) {
   
   };
 
-  compteur()
+  counter()
 
-  function addGoal(valeur){
+  function addGoal(value){
     setTimeout(function(){
-      odometer.innerHTML = valeur;
+      odometer.innerHTML = value;
     }, );
-  
   }
+
   
   // tell the embed parent frame the height of the content
  if (window.parent && window.parent.parent){
