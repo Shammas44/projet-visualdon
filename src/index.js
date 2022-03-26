@@ -3,13 +3,14 @@ import css from "./css/index.css";
 import papaparse from "papaparse";
 import addGoal from "./modules/counter";
 import detectScroll from "@egstad/detect-scroll";
-const WRAPPER = document.querySelector(".carousel");
+import { Splide } from "@splidejs/splide";
+const WRAPPER = document.querySelector(".splide__list");
 const MATCH_URL = "fused.csv";
 const MATCH_WRAPPER_HEIGHT = 16 * 20;
 const FLAG_URL = "https://flagcdn.com/h240/";
 let _all_matchs = {};
 let _indexes = { start: 0, end: 8, step: 1, current: 0 };
-let lastScrollTop = 960;
+let lastScrollTop = 0;
 let lastScrollDirection = "";
 fetch(MATCH_URL)
 	.then(function (response) {
@@ -21,60 +22,58 @@ fetch(MATCH_URL)
 		console.log(_all_matchs);
 		const small_chunk = _all_matchs.slice(0, _indexes.end);
 		build_match(small_chunk);
-		const currentId = Math.ceil(_indexes.end / 2) - 1;
-		WRAPPER.scrollTop = MATCH_WRAPPER_HEIGHT * currentId;
-		setTimeout(() => {
-			addGoal(_all_matchs[currentId].goals);
-			_indexes.current = currentId;
-			const instance = new detectScroll(WRAPPER);
-			setScrollListener();
-			WRAPPER.addEventListener("scrollUp", up);
-			WRAPPER.addEventListener("scrollDown", down);
-		}, 50);
+		new Splide(".splide", {
+			wheel: true,
+			updateOnMove: true,
+			type: "loop",
+			direction: "ttb",
+			arrows: false,
+			height: MATCH_WRAPPER_HEIGHT,
+			resetProgress: false,
+			pagination: false,
+		}).mount();
+		// const currentId = Math.ceil(_indexes.end / 2) - 1;
+		// WRAPPER.scrollTop = MATCH_WRAPPER_HEIGHT * currentId;
+		// setTimeout(() => {
+		// 	addGoal(_all_matchs[currentId].goals);
+		// 	_indexes.current = currentId;
+		// 	const instance = new detectScroll(WRAPPER);
+		// 	setScrollListener();
+		// 	WRAPPER.addEventListener("scrollUp", up);
+		// 	WRAPPER.addEventListener("scrollDown", down);
 	})
 	.catch(function (error) {
 		console.log(error);
 	});
 
 function build_match(small_chunk, appendChild = true) {
-	const carousel_item = document.querySelector(".carousel__item.template");
+	const carousel_item = document.querySelector(".match--card").content;
 	small_chunk.forEach((match) => {
 		const match_wrapper = carousel_item.cloneNode(true);
-		match_wrapper.classList.remove("template");
-		const away_country_code = match.away_team_code.toLowerCase();
-		const home_country_code = match.home_team_code.toLowerCase();
-		const score = `${match.home_score}-${match.away_score}`;
-		match_wrapper.querySelector(".event_name").textContent =
-			match.tournament + ` ${match.goals}`;
-		match_wrapper
-			.querySelector(".flag--home")
-			.setAttribute(
-				"style",
-				`background-image: url(${FLAG_URL}${home_country_code}.png);`
-			);
-		match_wrapper
-			.querySelector(".flag--away")
-			.setAttribute(
-				"style",
-				`background-image: url(${FLAG_URL}${away_country_code}.png);`
-			);
-		match_wrapper.querySelector(".score").textContent = score;
-		const victory = is_victory(match);
-		const match_card = match_wrapper.querySelector(".carousel__item-body");
-		if (victory) match_card.classList.add("victory");
-		if (victory == false) match_card.classList.add("defeat");
-		if (appendChild) {
-			WRAPPER.appendChild(match_wrapper);
-		} else {
-			WRAPPER.insertBefore(
-				match_wrapper,
-				WRAPPER.querySelector("div:first-child")
-			);
-		}
+		const updated_match_wrapper = setMatchData(match, match_wrapper, true);
+		WRAPPER.appendChild(updated_match_wrapper);
 	});
-	removeScrollListener();
-	WRAPPER.removeEventListener("scrollDown", down);
-	WRAPPER.removeEventListener("scrollUp", up);
+}
+
+function setMatchData(match, matchElement, isReturning = false) {
+	console.log(matchElement);
+	const away_country_code = match.away_team_code.toLowerCase();
+	const home_country_code = match.home_team_code.toLowerCase();
+	const score = `${match.home_score}-${match.away_score}`;
+	const away_style = `background-image: url(${FLAG_URL}${away_country_code}.png);`;
+	const home_style = `background-image: url(${FLAG_URL}${home_country_code}.png);`;
+	const victory = is_victory(match);
+	const match_card = matchElement.querySelector(".carousel__item-body");
+
+	matchElement.querySelector(".flag--home").setAttribute("style", home_style);
+	matchElement.querySelector(".flag--away").setAttribute("style", away_style);
+	matchElement.querySelector(".event-name").textContent =
+		match.tournament + ` ${match.goals}`;
+	matchElement.querySelector(".score").textContent = score;
+
+	if (victory) match_card.classList.add("victory");
+	if (victory == false) match_card.classList.add("defeat");
+	if (isReturning) return matchElement;
 }
 
 function csvToJson(data) {
@@ -91,15 +90,15 @@ function setScrollListener() {
 }
 
 function nextMatch(event) {
-	// console.log(event);
+	console.log(WRAPPER.scrollTop);
 	const scrollTop = event.detail.y;
 	const scrollDiff = Math.abs(lastScrollTop - scrollTop);
 	if (scrollTop % MATCH_WRAPPER_HEIGHT == 0) {
-		console.log(scrollDiff);
+		// console.log(scrollDiff);
 		if (lastScrollDirection == "down") {
-			_indexes.end += _indexes.step;
-			_indexes.start += _indexes.step;
-			_indexes.current += 1;
+			_indexes.start += 1;
+			_indexes.end += _indexes.end > _all_matchs.length ? 1 : 0;
+			_indexes.current += _indexes.current < _all_matchs.length ? 1 : 0;
 			if (_indexes.end <= _all_matchs.length) {
 				const small_chunk = new Array(_all_matchs[_indexes.end]);
 				lastScrollTop = scrollTop;
@@ -113,9 +112,9 @@ function nextMatch(event) {
 			}
 			addGoal(_all_matchs[_indexes.current].goals);
 		} else if (lastScrollDirection == "up") {
-			_indexes.start -= _indexes.start > 0 ? _indexes.step : 0;
-			_indexes.end -= _indexes.start > 0 ? _indexes.step : 0;
-			_indexes.current -= _indexes.current > 0 ? _indexes.step : 0;
+			_indexes.start -= _indexes.start > 0 ? 1 : 0;
+			_indexes.end -= _indexes.start > 0 ? 1 : 0;
+			_indexes.current -= _indexes.current > 0 ? 1 : 0;
 			if (_indexes.start >= 1) {
 				const small_chunk = new Array(_all_matchs[_indexes.start]);
 				lastScrollTop = scrollTop;
@@ -160,10 +159,12 @@ function is_victory(match) {
 }
 
 function down(event) {
-	console.log("down");
+	console.log("down " + lastScrollTop);
 	lastScrollDirection = "down";
+	lastScrollTop = WRAPPER.scrollTop;
 }
 function up(event) {
-	console.log("up");
+	console.log("up " + lastScrollTop);
 	lastScrollDirection = "up";
+	lastScrollTop = WRAPPER.scrollTop;
 }
