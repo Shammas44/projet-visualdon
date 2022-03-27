@@ -4,8 +4,6 @@ import { $ } from "./modules/utility";
 import papaparse from "papaparse";
 import addGoal from "./modules/counter";
 import { Splide } from "@splidejs/splide";
-import { indexes } from "d3";
-import { easeBack } from "d3";
 
 const WRAPPER = document.querySelector(".splide__list");
 const MATCH_URL = "fused.csv";
@@ -64,6 +62,7 @@ function buildMatch(small_chunk) {
 		const updated_match_wrapper = WRAPPER.querySelector("li:last-of-type");
 		setMatchData(match, key, updated_match_wrapper);
 	});
+	// TODO: auto select middle match in small_chunk
 	addGoal(_all_matchs[_carousel.startIndex].goals);
 }
 
