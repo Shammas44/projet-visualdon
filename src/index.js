@@ -1,17 +1,23 @@
 import * as d3 from "d3";
 import css from "./css/index.css";
+import { $ } from "./modules/utility";
 import papaparse from "papaparse";
 import addGoal from "./modules/counter";
-import detectScroll from "@egstad/detect-scroll";
 import { Splide } from "@splidejs/splide";
+import { indexes } from "d3";
+
 const WRAPPER = document.querySelector(".splide__list");
 const MATCH_URL = "fused.csv";
 const MATCH_WRAPPER_HEIGHT = 16 * 20;
 const FLAG_URL = "https://flagcdn.com/h240/";
 let _all_matchs = {};
-let _indexes = { start: 0, end: 8, step: 1, current: 0 };
-let lastScrollTop = 0;
-let lastScrollDirection = "";
+let _carousel = { size: 3 };
+_carousel.startIndex = isOddNumber(_carousel.size)
+	? Math.floor(_carousel.size / 2)
+	: (() => {
+			throw new Error("la taille du carousel doit être impaire");
+	  })();
+
 fetch(MATCH_URL)
 	.then(function (response) {
 		return response.text();
@@ -19,61 +25,66 @@ fetch(MATCH_URL)
 	.then(function (data) {
 		const parsed_data = csvToJson(data);
 		_all_matchs = parsed_data.data.slice(0, 20);
-		console.log(_all_matchs);
-		const small_chunk = _all_matchs.slice(0, _indexes.end);
-		build_match(small_chunk);
-		new Splide(".splide", {
-			wheel: true,
+		const small_chunk = _all_matchs.slice(0, _carousel.size);
+		buildMatch(small_chunk);
+		const carousel = new Splide(".splide", {
 			updateOnMove: true,
 			type: "loop",
+			drag: false,
+			start: _carousel.startIndex,
 			direction: "ttb",
 			arrows: false,
 			height: MATCH_WRAPPER_HEIGHT,
 			resetProgress: false,
 			pagination: false,
+			clones: 1,
+			cloneStatus: false,
+			keyboard: true,
 		}).mount();
-		// const currentId = Math.ceil(_indexes.end / 2) - 1;
-		// WRAPPER.scrollTop = MATCH_WRAPPER_HEIGHT * currentId;
-		// setTimeout(() => {
-		// 	addGoal(_all_matchs[currentId].goals);
-		// 	_indexes.current = currentId;
-		// 	const instance = new detectScroll(WRAPPER);
-		// 	setScrollListener();
-		// 	WRAPPER.addEventListener("scrollUp", up);
-		// 	WRAPPER.addEventListener("scrollDown", down);
+		carousel.on("moved", nextMatch);
 	})
 	.catch(function (error) {
 		console.log(error);
 	});
 
-function build_match(small_chunk, appendChild = true) {
+function buildMatch(small_chunk) {
 	const carousel_item = document.querySelector(".match--card").content;
-	small_chunk.forEach((match) => {
+	small_chunk.forEach((match, key) => {
 		const match_wrapper = carousel_item.cloneNode(true);
-		const updated_match_wrapper = setMatchData(match, match_wrapper, true);
-		WRAPPER.appendChild(updated_match_wrapper);
+		WRAPPER.appendChild(match_wrapper);
+		const updated_match_wrapper = WRAPPER.querySelector("li:last-of-type");
+		setMatchData(match, key, updated_match_wrapper);
 	});
+	addGoal(_all_matchs[_carousel.startIndex].goals);
 }
 
-function setMatchData(match, matchElement, isReturning = false) {
-	console.log(matchElement);
-	const away_country_code = match.away_team_code.toLowerCase();
-	const home_country_code = match.home_team_code.toLowerCase();
-	const score = `${match.home_score}-${match.away_score}`;
-	const away_style = `background-image: url(${FLAG_URL}${away_country_code}.png);`;
-	const home_style = `background-image: url(${FLAG_URL}${home_country_code}.png);`;
-	const victory = is_victory(match);
-	const match_card = matchElement.querySelector(".carousel__item-body");
+function setMatchData(match, matchId, matchElement) {
+	const setter = (element) => {
+		const away_country_code = match.away_team_code.toLowerCase();
+		const home_country_code = match.home_team_code.toLowerCase();
+		const score = `${match.home_score}-${match.away_score}`;
+		const tournament = match.tournament + ` ${match.goals}`;
+		const away_style = `background-image: url(${FLAG_URL}${away_country_code}.png);`;
+		const home_style = `background-image: url(${FLAG_URL}${home_country_code}.png);`;
+		const victory = isVictory(match);
+		const match_card = element.querySelector(".carousel__item-body");
 
-	matchElement.querySelector(".flag--home").setAttribute("style", home_style);
-	matchElement.querySelector(".flag--away").setAttribute("style", away_style);
-	matchElement.querySelector(".event-name").textContent =
-		match.tournament + ` ${match.goals}`;
-	matchElement.querySelector(".score").textContent = score;
+		element.querySelector(".flag--home").setAttribute("style", home_style);
+		element.querySelector(".flag--away").setAttribute("style", away_style);
+		element.querySelector(".event-name").textContent = tournament;
+		element.querySelector(".score").textContent = score;
+		element.setAttribute("data-Id", matchId);
 
-	if (victory) match_card.classList.add("victory");
-	if (victory == false) match_card.classList.add("defeat");
-	if (isReturning) return matchElement;
+		if (victory) match_card.classList.add("victory");
+		if (victory == false) match_card.classList.add("defeat");
+	};
+	if (NodeList.prototype.isPrototypeOf(matchElement)) {
+		matchElement.forEach((element) => {
+			setter(element);
+		});
+	} else {
+		setter(matchElement);
+	}
 }
 
 function csvToJson(data) {
@@ -85,72 +96,31 @@ function csvToJson(data) {
 	});
 	return parsed_matchs;
 }
-function setScrollListener() {
-	WRAPPER.addEventListener("scrollY", nextMatch);
+
+function nextMatch() {
+	const matchLength = _all_matchs.length;
+	const selector = ".splide__slide";
+	const active = `${selector}.is-active`;
+	const prev = `${selector}.is-prev`;
+	const next = `${selector}.is-next`;
+
+	const slideId = parseInt($(active).dataset.id);
+	const nextSlideId = parseInt($(next).dataset.id);
+	const prevSlideId = parseInt($(prev).dataset.id);
+
+	const nextMatchId = slideId + 1 > matchLength - 1 ? 0 : slideId + 1;
+	const prevMatchId = slideId - 1 < 0 ? matchLength - 1 : slideId - 1;
+	const prevMatch = _all_matchs[prevMatchId];
+	const nextMatch = _all_matchs[nextMatchId];
+	const prevCard = $(`${selector}[data-id="${prevSlideId}"]`, true);
+	const nextCard = $(`${selector}[data-id="${nextSlideId}"]`, true);
+
+	addGoal(_all_matchs[slideId].goals);
+	setMatchData(prevMatch, prevMatchId, prevCard);
+	setMatchData(nextMatch, nextMatchId, nextCard);
 }
 
-function nextMatch(event) {
-	console.log(WRAPPER.scrollTop);
-	const scrollTop = event.detail.y;
-	const scrollDiff = Math.abs(lastScrollTop - scrollTop);
-	if (scrollTop % MATCH_WRAPPER_HEIGHT == 0) {
-		// console.log(scrollDiff);
-		if (lastScrollDirection == "down") {
-			_indexes.start += 1;
-			_indexes.end += _indexes.end > _all_matchs.length ? 1 : 0;
-			_indexes.current += _indexes.current < _all_matchs.length ? 1 : 0;
-			if (_indexes.end <= _all_matchs.length) {
-				const small_chunk = new Array(_all_matchs[_indexes.end]);
-				lastScrollTop = scrollTop;
-				build_match(small_chunk);
-				WRAPPER.querySelector("div:first-child").remove();
-				setTimeout(() => {
-					setScrollListener();
-					WRAPPER.addEventListener("scrollDown", down);
-					WRAPPER.addEventListener("scrollUp", up);
-				}, 50);
-			}
-			addGoal(_all_matchs[_indexes.current].goals);
-		} else if (lastScrollDirection == "up") {
-			_indexes.start -= _indexes.start > 0 ? 1 : 0;
-			_indexes.end -= _indexes.start > 0 ? 1 : 0;
-			_indexes.current -= _indexes.current > 0 ? 1 : 0;
-			if (_indexes.start >= 1) {
-				const small_chunk = new Array(_all_matchs[_indexes.start]);
-				lastScrollTop = scrollTop;
-				build_match(small_chunk, false);
-				WRAPPER.querySelector("div:last-child").remove();
-				setTimeout(() => {
-					setScrollListener();
-					WRAPPER.addEventListener("scrollUp", up);
-					WRAPPER.addEventListener("scrollDown", down);
-				}, 50);
-			}
-			addGoal(_all_matchs[_indexes.current].goals);
-		}
-	}
-}
-
-function removeScrollListener() {
-	WRAPPER.removeEventListener("scrollY", nextMatch);
-}
-
-function clear_children(parentNode, length = 1) {
-	while (parentNode.children.length > length) {
-		parentNode.removeChild(parentNode.lastChild);
-	}
-}
-
-function isValidScroll() {
-	return WRAPPER.scrollTop == 4 * MATCH_WRAPPER_HEIGHT ||
-		WRAPPER.scrollTop == 2 * MATCH_WRAPPER_HEIGHT ||
-		WRAPPER.scrollTop == MATCH_WRAPPER_HEIGHT ||
-		WRAPPER.scrollTop == 0
-		? true
-		: false;
-}
-
-function is_victory(match) {
+function isVictory(match) {
 	if (match.away_score == match.home_score) return null;
 	const is_switzerland = match.away_team == "Switzerland" ? true : false;
 	const victory = match.away_score > match.home_score ? true : false;
@@ -158,13 +128,6 @@ function is_victory(match) {
 	return false;
 }
 
-function down(event) {
-	console.log("down " + lastScrollTop);
-	lastScrollDirection = "down";
-	lastScrollTop = WRAPPER.scrollTop;
-}
-function up(event) {
-	console.log("up " + lastScrollTop);
-	lastScrollDirection = "up";
-	lastScrollTop = WRAPPER.scrollTop;
+function isOddNumber(oddSize) {
+	return parseInt(oddSize) % 2 != 0 ? true : false;
 }

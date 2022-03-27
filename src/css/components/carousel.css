@@ -84,12 +84,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 500px;
-    /* display: block; */
-    /* overflow-y: scroll; */
     height: var(--wrapper-height);
-    /* -ms-overflow-style: none; */
-    /* overflow: -moz-scrollbars-none; */
-    /* scroll-snap-type: y mandatory; */
 }
 
 .carousel::-webkit-scrollbar {
@@ -97,13 +92,15 @@ body {
 }
 
 .carousel::after {
-    /* content: ""; */
-    /* width: 100%; */
-    /* height: var(--wrapper-height); */
-    /* background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 100%); */
-    /* z-index: 10; */
-    /* position: fixed; */
-    /* top: 0; */
+    content: "";
+    width: 100%;
+    height: var(--wrapper-height);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 100%);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 
 .splide__slide {
