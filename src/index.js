@@ -5,11 +5,14 @@ import papaparse from "papaparse";
 import addGoal from "./modules/counter";
 import { Splide } from "@splidejs/splide";
 import { indexes } from "d3";
+import { easeBack } from "d3";
 
 const WRAPPER = document.querySelector(".splide__list");
 const MATCH_URL = "fused.csv";
 const MATCH_WRAPPER_HEIGHT = 16 * 20;
 const FLAG_URL = "https://flagcdn.com/h240/";
+const BUTTON_PREV = $(".button--prev");
+const BUTTON_NEXT = $(".button--next");
 let _all_matchs = {};
 let _carousel = { size: 3 };
 _carousel.startIndex = isOddNumber(_carousel.size)
@@ -33,7 +36,7 @@ fetch(MATCH_URL)
 			drag: false,
 			start: _carousel.startIndex,
 			direction: "ttb",
-			arrows: false,
+			arrows: true,
 			height: MATCH_WRAPPER_HEIGHT,
 			resetProgress: false,
 			pagination: false,
@@ -42,6 +45,12 @@ fetch(MATCH_URL)
 			keyboard: true,
 		}).mount();
 		carousel.on("moved", nextMatch);
+		BUTTON_NEXT.addEventListener("click", () => {
+			$(".splide__arrow--next").click();
+		});
+		BUTTON_PREV.addEventListener("click", () => {
+			$(".splide__arrow--prev").click();
+		});
 	})
 	.catch(function (error) {
 		console.log(error);
@@ -75,8 +84,16 @@ function setMatchData(match, matchId, matchElement) {
 		element.querySelector(".score").textContent = score;
 		element.setAttribute("data-Id", matchId);
 
-		if (victory) match_card.classList.add("victory");
-		if (victory == false) match_card.classList.add("defeat");
+		if (victory) {
+			match_card.classList.remove("defeat");
+			match_card.classList.add("victory");
+		} else if (victory == false) {
+			match_card.classList.add("defeat");
+			match_card.classList.remove("victory");
+		} else if (victory == null) {
+			match_card.classList.remove("defeat");
+			match_card.classList.remove("victory");
+		}
 	};
 	if (NodeList.prototype.isPrototypeOf(matchElement)) {
 		matchElement.forEach((element) => {
