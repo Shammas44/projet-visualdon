@@ -7,10 +7,15 @@ const WRAPPER = document.querySelector(".carousel");
 const MATCH_URL = "fused.csv";
 const MATCH_WRAPPER_HEIGHT = 16 * 20;
 const FLAG_URL = "https://flagcdn.com/h240/";
-let _all_matchs = {};
-let _indexes = { start: 0, end: 8, step: 1, current: 0 };
-let lastScrollTop = 960;
 let lastScrollDirection = "";
+let _all_matchs = {};
+let _ids = { top: 0, down: 8, step: 1, now: 0 };
+_ids.now = isOddNumber(_ids.down + 1)
+	? Math.floor((_ids.down + 1) / 2)
+	: (() => {
+			throw new Error("l'index de départ doit être impaire");
+	  })();
+
 fetch(MATCH_URL)
 	.then(function (response) {
 		return response.text();
@@ -18,14 +23,11 @@ fetch(MATCH_URL)
 	.then(function (data) {
 		const parsed_data = csvToJson(data);
 		_all_matchs = parsed_data.data.slice(0, 20);
-		console.log(_all_matchs);
-		const small_chunk = _all_matchs.slice(0, _indexes.end);
+		const small_chunk = _all_matchs.slice(0, _ids.down + 1);
 		build_match(small_chunk);
-		const currentId = Math.ceil(_indexes.end / 2) - 1;
-		WRAPPER.scrollTop = MATCH_WRAPPER_HEIGHT * currentId;
+		WRAPPER.scrollTop = MATCH_WRAPPER_HEIGHT * _ids.now;
 		setTimeout(() => {
-			addGoal(_all_matchs[currentId].goals);
-			_indexes.current = currentId;
+			addGoal(_all_matchs[_ids.now].goals);
 			const instance = new detectScroll(WRAPPER);
 			setScrollListener();
 			WRAPPER.addEventListener("scrollUp", up);
@@ -38,38 +40,38 @@ fetch(MATCH_URL)
 
 function build_match(small_chunk, appendChild = true) {
 	const carousel_item = document.querySelector(".carousel__item.template");
+
 	small_chunk.forEach((match) => {
-		const match_wrapper = carousel_item.cloneNode(true);
-		match_wrapper.classList.remove("template");
+		const element = carousel_item.cloneNode(true);
 		const away_country_code = match.away_team_code.toLowerCase();
 		const home_country_code = match.home_team_code.toLowerCase();
 		const score = `${match.home_score}-${match.away_score}`;
-		match_wrapper.querySelector(".event_name").textContent =
-			match.tournament + ` ${match.goals}`;
-		match_wrapper
-			.querySelector(".flag--home")
-			.setAttribute(
-				"style",
-				`background-image: url(${FLAG_URL}${home_country_code}.png);`
-			);
-		match_wrapper
-			.querySelector(".flag--away")
-			.setAttribute(
-				"style",
-				`background-image: url(${FLAG_URL}${away_country_code}.png);`
-			);
-		match_wrapper.querySelector(".score").textContent = score;
-		const victory = is_victory(match);
-		const match_card = match_wrapper.querySelector(".carousel__item-body");
-		if (victory) match_card.classList.add("victory");
-		if (victory == false) match_card.classList.add("defeat");
+		const tournament = match.tournament + ` ${match.goals}`;
+		const away_style = `background-image: url(${FLAG_URL}${away_country_code}.png);`;
+		const home_style = `background-image: url(${FLAG_URL}${home_country_code}.png);`;
+		const victory = isVictory(match);
+		const match_card = element.querySelector(".carousel__item-body");
+
+		element.querySelector(".flag--home").setAttribute("style", home_style);
+		element.querySelector(".flag--away").setAttribute("style", away_style);
+		element.querySelector(".event-name").textContent = tournament;
+		element.querySelector(".score").textContent = score;
+		element.classList.remove("template");
+
+		if (victory) {
+			match_card.classList.remove("defeat");
+			match_card.classList.add("victory");
+		} else if (victory == false) {
+			match_card.classList.add("defeat");
+			match_card.classList.remove("victory");
+		} else if (victory == null) {
+			match_card.classList.remove("defeat");
+			match_card.classList.remove("victory");
+		}
 		if (appendChild) {
-			WRAPPER.appendChild(match_wrapper);
+			WRAPPER.appendChild(element);
 		} else {
-			WRAPPER.insertBefore(
-				match_wrapper,
-				WRAPPER.querySelector("div:first-child")
-			);
+			WRAPPER.insertBefore(element, WRAPPER.querySelector("div:first-child"));
 		}
 	});
 	removeScrollListener();
@@ -86,48 +88,39 @@ function csvToJson(data) {
 	});
 	return parsed_matchs;
 }
+
 function setScrollListener() {
 	WRAPPER.addEventListener("scrollY", nextMatch);
 }
 
 function nextMatch(event) {
-	// console.log(event);
 	const scrollTop = event.detail.y;
-	const scrollDiff = Math.abs(lastScrollTop - scrollTop);
-	if (scrollTop % MATCH_WRAPPER_HEIGHT == 0) {
-		console.log(scrollDiff);
+	console.log(scrollTop);
+	const matchLength = _all_matchs.length;
+
+	const setter = (newIndex, isAppending, removeSelector) => {
+		const new_match = new Array(_all_matchs[newIndex]);
+		addGoal(_all_matchs[_ids.now].goals);
+		build_match(new_match, isAppending);
+		WRAPPER.querySelector(removeSelector).remove();
+		setTimeout(() => {
+			setScrollListener();
+			WRAPPER.addEventListener("scrollUp", up);
+			WRAPPER.addEventListener("scrollDown", down);
+		}, 50);
+	};
+
+	if (scrollTop % MATCH_WRAPPER_HEIGHT == 0 && scrollTop != 960) {
 		if (lastScrollDirection == "down") {
-			_indexes.end += _indexes.step;
-			_indexes.start += _indexes.step;
-			_indexes.current += 1;
-			if (_indexes.end <= _all_matchs.length) {
-				const small_chunk = new Array(_all_matchs[_indexes.end]);
-				lastScrollTop = scrollTop;
-				build_match(small_chunk);
-				WRAPPER.querySelector("div:first-child").remove();
-				setTimeout(() => {
-					setScrollListener();
-					WRAPPER.addEventListener("scrollDown", down);
-					WRAPPER.addEventListener("scrollUp", up);
-				}, 50);
-			}
-			addGoal(_all_matchs[_indexes.current].goals);
+			_ids.top = _ids.top + 1 > matchLength - 1 ? 0 : _ids.top + 1;
+			_ids.now = _ids.now + 1 > matchLength - 1 ? 0 : _ids.now + 1;
+			_ids.down = _ids.down + 1 > matchLength - 1 ? 0 : _ids.down + 1;
+			setter(_ids.down, true, "div:first-child");
 		} else if (lastScrollDirection == "up") {
-			_indexes.start -= _indexes.start > 0 ? _indexes.step : 0;
-			_indexes.end -= _indexes.start > 0 ? _indexes.step : 0;
-			_indexes.current -= _indexes.current > 0 ? _indexes.step : 0;
-			if (_indexes.start >= 1) {
-				const small_chunk = new Array(_all_matchs[_indexes.start]);
-				lastScrollTop = scrollTop;
-				build_match(small_chunk, false);
-				WRAPPER.querySelector("div:last-child").remove();
-				setTimeout(() => {
-					setScrollListener();
-					WRAPPER.addEventListener("scrollUp", up);
-					WRAPPER.addEventListener("scrollDown", down);
-				}, 50);
-			}
-			addGoal(_all_matchs[_indexes.current].goals);
+			_ids.top = _ids.top - 1 < 0 ? matchLength - 1 : _ids.top - 1;
+			_ids.now = _ids.now - 1 < 0 ? matchLength - 1 : _ids.now - 1;
+			_ids.down = _ids.down - 1 < 0 ? matchLength - 1 : _ids.down - 1;
+			setter(_ids.top, false, "div:last-child");
 		}
 	}
 }
@@ -151,14 +144,6 @@ function isValidScroll() {
 		: false;
 }
 
-function is_victory(match) {
-	if (match.away_score == match.home_score) return null;
-	const is_switzerland = match.away_team == "Switzerland" ? true : false;
-	const victory = match.away_score > match.home_score ? true : false;
-	if ((victory && is_switzerland) || (!victory && !is_switzerland)) return true;
-	return false;
-}
-
 function down(event) {
 	console.log("down");
 	lastScrollDirection = "down";
@@ -166,4 +151,39 @@ function down(event) {
 function up(event) {
 	console.log("up");
 	lastScrollDirection = "up";
+}
+
+function nextMatchssss() {
+	const matchLength = _all_matchs.length;
+	const selector = ".splide__slide";
+	const active = `${selector}.is-active`;
+	const prev = `${selector}.is-prev`;
+	const next = `${selector}.is-next`;
+
+	const slideId = parseInt($(active).dataset.id);
+	const nextSlideId = parseInt($(next).dataset.id);
+	const prevSlideId = parseInt($(prev).dataset.id);
+
+	const nextMatchId = slideId + 1 > matchLength - 1 ? 0 : slideId + 1;
+	const prevMatchId = slideId - 1 < 0 ? matchLength - 1 : slideId - 1;
+	const prevMatch = _all_matchs[prevMatchId];
+	const nextMatch = _all_matchs[nextMatchId];
+	const prevCard = $(`${selector}[data-id="${prevSlideId}"]`, true);
+	const nextCard = $(`${selector}[data-id="${nextSlideId}"]`, true);
+
+	addGoal(_all_matchs[slideId].goals);
+	setMatchData(prevMatch, prevMatchId, prevCard);
+	setMatchData(nextMatch, nextMatchId, nextCard);
+}
+
+function isVictory(match) {
+	if (match.away_score == match.home_score) return null;
+	const is_switzerland = match.away_team == "Switzerland" ? true : false;
+	const victory = match.away_score > match.home_score ? true : false;
+	if ((victory && is_switzerland) || (!victory && !is_switzerland)) return true;
+	return false;
+}
+
+function isOddNumber(oddSize) {
+	return parseInt(oddSize) % 2 != 0 ? true : false;
 }
