@@ -1,19 +1,22 @@
 import * as d3 from "d3";
 import css from "./css/index.css";
+import { $ } from "./modules/utility";
 import papaparse from "papaparse";
 import addGoal from "./modules/counter";
-import detectScroll from "@egstad/detect-scroll";
-const WRAPPER = document.querySelector(".carousel");
+import { Splide } from "@splidejs/splide";
+
+const WRAPPER = document.querySelector(".splide__list");
 const MATCH_URL = "fused.csv";
 const MATCH_WRAPPER_HEIGHT = 16 * 20;
 const FLAG_URL = "https://flagcdn.com/h240/";
-let lastScrollDirection = "";
+const BUTTON_PREV = $(".button--prev");
+const BUTTON_NEXT = $(".button--next");
 let _all_matchs = {};
-let _ids = { top: 0, down: 8, step: 1, now: 0 };
-_ids.now = isOddNumber(_ids.down + 1)
-	? Math.floor((_ids.down + 1) / 2)
+let _carousel = { size: 3 };
+_carousel.startIndex = isOddNumber(_carousel.size)
+	? Math.floor(_carousel.size / 2)
 	: (() => {
-			throw new Error("l'index de départ doit être impaire");
+			throw new Error("la taille du carousel doit être impaire");
 	  })();
 
 fetch(MATCH_URL)
@@ -23,26 +26,48 @@ fetch(MATCH_URL)
 	.then(function (data) {
 		const parsed_data = csvToJson(data);
 		_all_matchs = parsed_data.data.slice(0, 20);
-		const small_chunk = _all_matchs.slice(0, _ids.down + 1);
-		build_match(small_chunk);
-		WRAPPER.scrollTop = MATCH_WRAPPER_HEIGHT * _ids.now;
-		setTimeout(() => {
-			addGoal(_all_matchs[_ids.now].goals);
-			const instance = new detectScroll(WRAPPER);
-			setScrollListener();
-			WRAPPER.addEventListener("scrollUp", up);
-			WRAPPER.addEventListener("scrollDown", down);
-		}, 50);
+		const small_chunk = _all_matchs.slice(0, _carousel.size);
+		buildMatch(small_chunk);
+		const carousel = new Splide(".splide", {
+			updateOnMove: true,
+			type: "loop",
+			drag: false,
+			start: _carousel.startIndex,
+			direction: "ttb",
+			arrows: true,
+			height: MATCH_WRAPPER_HEIGHT,
+			resetProgress: false,
+			pagination: false,
+			clones: 1,
+			cloneStatus: false,
+			keyboard: true,
+		}).mount();
+		carousel.on("moved", nextMatch);
+		BUTTON_NEXT.addEventListener("click", () => {
+			$(".splide__arrow--next").click();
+		});
+		BUTTON_PREV.addEventListener("click", () => {
+			$(".splide__arrow--prev").click();
+		});
 	})
 	.catch(function (error) {
 		console.log(error);
 	});
 
-function build_match(small_chunk, appendChild = true) {
-	const carousel_item = document.querySelector(".carousel__item.template");
+function buildMatch(small_chunk) {
+	const carousel_item = document.querySelector(".match--card").content;
+	small_chunk.forEach((match, key) => {
+		const match_wrapper = carousel_item.cloneNode(true);
+		WRAPPER.appendChild(match_wrapper);
+		const updated_match_wrapper = WRAPPER.querySelector("li:last-of-type");
+		setMatchData(match, key, updated_match_wrapper);
+	});
+	// TODO: auto select middle match in small_chunk
+	addGoal(_all_matchs[_carousel.startIndex].goals);
+}
 
-	small_chunk.forEach((match) => {
-		const element = carousel_item.cloneNode(true);
+function setMatchData(match, matchId, matchElement) {
+	const setter = (element) => {
 		const away_country_code = match.away_team_code.toLowerCase();
 		const home_country_code = match.home_team_code.toLowerCase();
 		const score = `${match.home_score}-${match.away_score}`;
@@ -56,7 +81,7 @@ function build_match(small_chunk, appendChild = true) {
 		element.querySelector(".flag--away").setAttribute("style", away_style);
 		element.querySelector(".event-name").textContent = tournament;
 		element.querySelector(".score").textContent = score;
-		element.classList.remove("template");
+		element.setAttribute("data-Id", matchId);
 
 		if (victory) {
 			match_card.classList.remove("defeat");
@@ -68,15 +93,14 @@ function build_match(small_chunk, appendChild = true) {
 			match_card.classList.remove("defeat");
 			match_card.classList.remove("victory");
 		}
-		if (appendChild) {
-			WRAPPER.appendChild(element);
-		} else {
-			WRAPPER.insertBefore(element, WRAPPER.querySelector("div:first-child"));
-		}
-	});
-	removeScrollListener();
-	WRAPPER.removeEventListener("scrollDown", down);
-	WRAPPER.removeEventListener("scrollUp", up);
+	};
+	if (NodeList.prototype.isPrototypeOf(matchElement)) {
+		matchElement.forEach((element) => {
+			setter(element);
+		});
+	} else {
+		setter(matchElement);
+	}
 }
 
 function csvToJson(data) {
@@ -89,71 +113,7 @@ function csvToJson(data) {
 	return parsed_matchs;
 }
 
-function setScrollListener() {
-	WRAPPER.addEventListener("scrollY", nextMatch);
-}
-
-function nextMatch(event) {
-	const scrollTop = event.detail.y;
-	console.log(scrollTop);
-	const matchLength = _all_matchs.length;
-
-	const setter = (newIndex, isAppending, removeSelector) => {
-		const new_match = new Array(_all_matchs[newIndex]);
-		addGoal(_all_matchs[_ids.now].goals);
-		build_match(new_match, isAppending);
-		WRAPPER.querySelector(removeSelector).remove();
-		setTimeout(() => {
-			setScrollListener();
-			WRAPPER.addEventListener("scrollUp", up);
-			WRAPPER.addEventListener("scrollDown", down);
-		}, 50);
-	};
-
-	if (scrollTop % MATCH_WRAPPER_HEIGHT == 0 && scrollTop != 960) {
-		if (lastScrollDirection == "down") {
-			_ids.top = _ids.top + 1 > matchLength - 1 ? 0 : _ids.top + 1;
-			_ids.now = _ids.now + 1 > matchLength - 1 ? 0 : _ids.now + 1;
-			_ids.down = _ids.down + 1 > matchLength - 1 ? 0 : _ids.down + 1;
-			setter(_ids.down, true, "div:first-child");
-		} else if (lastScrollDirection == "up") {
-			_ids.top = _ids.top - 1 < 0 ? matchLength - 1 : _ids.top - 1;
-			_ids.now = _ids.now - 1 < 0 ? matchLength - 1 : _ids.now - 1;
-			_ids.down = _ids.down - 1 < 0 ? matchLength - 1 : _ids.down - 1;
-			setter(_ids.top, false, "div:last-child");
-		}
-	}
-}
-
-function removeScrollListener() {
-	WRAPPER.removeEventListener("scrollY", nextMatch);
-}
-
-function clear_children(parentNode, length = 1) {
-	while (parentNode.children.length > length) {
-		parentNode.removeChild(parentNode.lastChild);
-	}
-}
-
-function isValidScroll() {
-	return WRAPPER.scrollTop == 4 * MATCH_WRAPPER_HEIGHT ||
-		WRAPPER.scrollTop == 2 * MATCH_WRAPPER_HEIGHT ||
-		WRAPPER.scrollTop == MATCH_WRAPPER_HEIGHT ||
-		WRAPPER.scrollTop == 0
-		? true
-		: false;
-}
-
-function down(event) {
-	console.log("down");
-	lastScrollDirection = "down";
-}
-function up(event) {
-	console.log("up");
-	lastScrollDirection = "up";
-}
-
-function nextMatchssss() {
+function nextMatch() {
 	const matchLength = _all_matchs.length;
 	const selector = ".splide__slide";
 	const active = `${selector}.is-active`;
