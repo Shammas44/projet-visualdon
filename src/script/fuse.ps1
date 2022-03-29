@@ -1,6 +1,6 @@
 #!bin/pwsh
-$matchs = import-csv -Path ./public/foot.csv -Delimiter ","
-$country = import-csv -Path ./public/country.csv -Delimiter ","
+$matchs = import-csv -Path ./../../public/foot.csv -Delimiter ","
+$country = import-csv -Path ./../../public/country.csv -Delimiter ","
 
 Foreach ($match in $matchs) {
     $away_team = $match.away_team

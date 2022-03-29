@@ -1,9 +1,10 @@
 #!bin/pwsh
-$matchs = import-csv -Path ./rawdata.csv -Delimiter ","
+$matchs = import-csv -Path ./../../public/rawdata.csv -Delimiter ","
 $victory = 0
 $defeat = 0
 $egality = 0
 $i = 0
+$_goals = 0
 
 Foreach ($match in $matchs) {
     $home_team = $match.home_team
@@ -11,6 +12,7 @@ Foreach ($match in $matchs) {
     $away_score = $match.away_score
     $home_score = $match.home_score
     if ($home_team -eq 'Switzerland') {
+        $_goals += $home_score
         if ($home_score -gt $away_score) {
             $victory += 1
         }
@@ -22,6 +24,7 @@ Foreach ($match in $matchs) {
         }
     }
     else {
+        $_goals += $away_score
         if ($home_score -lt $away_score) {
             $victory += 1
         }
@@ -36,8 +39,9 @@ Foreach ($match in $matchs) {
     $match.victory = 100 * $victory / $total
     $match.egality = 100 * $egality / $total
     $match.defeat = 100 * $defeat / $total
+    $match.goals = $_goals
 } 
 
-$fileName = "football_results"
+$fileName = "foot"
 $csvFileName = "$fileName.csv"
 $matchs | convertTo-csv | out-file  $csvFileName -Encoding unicode
