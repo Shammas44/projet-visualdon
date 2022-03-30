@@ -10,6 +10,10 @@ import {
 } from "./config";
 
 export default class Carousel {
+	/**
+	 * This function is used to create a carousel with default matchs
+	 * @param matchs - an array of matchs
+	 */
 	constructor(matchs) {
 		this.carouselProperty = { size: 3 };
 		this.all_matchs = matchs;
@@ -20,10 +24,16 @@ export default class Carousel {
 			: (() => {
 					throw new Error("la taille du carousel doit être impaire");
 			  })();
-		this.createCarousel();
 		const defaultMatch = matchs.slice(0, this.carouselProperty.size);
 		this.buildMatch(defaultMatch);
+		this.createCarousel();
 	}
+
+	/**
+	 * This function takes in a small chunk of matches and loops through them, creating a new match card
+	 * for each match
+	 * @param small_chunk - An array of matches that will be displayed in the carousel.
+	 */
 	buildMatch(small_chunk) {
 		const carousel_item = document.querySelector(".match--card").content;
 		small_chunk.forEach((match, key) => {
@@ -35,6 +45,9 @@ export default class Carousel {
 		addGoal(this.all_matchs[this.carouselProperty.startIndex].goals);
 	}
 
+	/**
+	 * Create a new Splide object and mount it to the DOM
+	 */
 	createCarousel() {
 		this.carousel = new Splide(".splide", {
 			updateOnMove: true,
@@ -51,7 +64,6 @@ export default class Carousel {
 			keyboard: true,
 		}).mount();
 		this.carousel.on("moved", () => {
-			console.log("hello");
 			this.nextMatch();
 		});
 		BUTTON_NEXT.addEventListener("click", () => {
@@ -62,6 +74,12 @@ export default class Carousel {
 		});
 	}
 
+	/**
+	 * This function sets the match data for each match card
+	 * @param match - The match object.
+	 * @param matchId - The id of the match.
+	 * @param matchElement - The element that will be updated.
+	 */
 	setMatchData(match, matchId, matchElement) {
 		const setter = (element) => {
 			const away_country_code = match.away_team_code.toLowerCase();
@@ -99,8 +117,13 @@ export default class Carousel {
 		}
 	}
 
+	/**
+	 * The function is called when the user clicks on the next or previous buttons.
+	 * It takes the current match and the next or previous match and adds the goals to the current match.
+	 * It also sets the data-id attribute of the next or previous match to the correct value
+	 */
 	nextMatch() {
-		const matchLength = _all_matchs.length;
+		const matchLength = this.all_matchs.length;
 		const selector = ".splide__slide";
 		const active = `${selector}.is-active`;
 		const prev = `${selector}.is-prev`;
@@ -112,16 +135,21 @@ export default class Carousel {
 
 		const nextMatchId = slideId + 1 > matchLength - 1 ? 0 : slideId + 1;
 		const prevMatchId = slideId - 1 < 0 ? matchLength - 1 : slideId - 1;
-		const prevMatch = _all_matchs[prevMatchId];
-		const nextMatch = _all_matchs[nextMatchId];
+		const prevMatch = this.all_matchs[prevMatchId];
+		const nextMatch = this.all_matchs[nextMatchId];
 		const prevCard = $(`${selector}[data-id="${prevSlideId}"]`, true);
 		const nextCard = $(`${selector}[data-id="${nextSlideId}"]`, true);
 
-		addGoal(_all_matchs[slideId].goals);
+		addGoal(this.all_matchs[slideId].goals);
 		this.setMatchData(prevMatch, prevMatchId, prevCard);
 		this.setMatchData(nextMatch, nextMatchId, nextCard);
 	}
 
+	/**
+	 * If the away team is Switzerland, then the away team wins. Otherwise, the home team wins
+	 * @param match - the match object
+	 * @returns A boolean value.
+	 */
 	isVictory(match) {
 		if (match.away_score == match.home_score) return null;
 		const is_switzerland = match.away_team == "Switzerland" ? true : false;
@@ -131,7 +159,12 @@ export default class Carousel {
 		return false;
 	}
 
-	isOddNumber(oddSize) {
-		return parseInt(oddSize) % 2 != 0 ? true : false;
+	/**
+	 * Given a number, return true if the number is odd, false if the number is even
+	 * @param number - The number to check.
+	 * @returns The value of the expression parseInt(number) % 2 != 0 ? true : false;
+	 */
+	isOddNumber(number) {
+		return parseInt(number) % 2 != 0 ? true : false;
 	}
 }
