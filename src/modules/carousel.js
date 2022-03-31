@@ -110,12 +110,12 @@ export default class Carousel {
 	}
 
 	/**
-	 * This function sets the match data for each match card
-	 * @param match - The match object.
+	 * This function sets the match data for each match element
+	 * @param match - The match object that we're trying to set the data for.
 	 * @param matchId - The id of the match.
-	 * @param matchElement - The element that will be updated.
+	 * @param matchElements - The elements that will be updated.
 	 */
-	setMatchData(match, matchId, matchElement) {
+	setMatchData(match, matchId, matchElements) {
 		const setter = (element) => {
 			const away_country_code = match.away_team_code.toLowerCase();
 			const home_country_code = match.home_team_code.toLowerCase();
@@ -144,11 +144,11 @@ export default class Carousel {
 			}
 		};
 		if (NodeList.prototype.isPrototypeOf(matchElement)) {
-			matchElement.forEach((element) => {
+			matchElements.forEach((element) => {
 				setter(element);
 			});
 		} else {
-			setter(matchElement);
+			setter(matchElements);
 		}
 	}
 
