@@ -1,20 +1,25 @@
 import { $ } from "./utility";
 import addGoal from "./counter";
 import { Splide } from "@splidejs/splide";
-import {
-	BUTTON_NEXT,
-	BUTTON_PREV,
-	MATCH_WRAPPER_HEIGHT,
-	WRAPPER,
-	FLAG_URL,
-} from "./config";
+import { MATCH_WRAPPER_HEIGHT, WRAPPER, FLAG_URL } from "./config";
 
 export default class Carousel {
 	/**
-	 * This function is used to create a carousel with default matchs
+	 * The constructor function takes two parameters:
+	 *
+	 * - matchs: an array of matchs
+	 * - options: an object of options
+	 *
+	 * It creates a carousel property object with the following properties:
+	 *
+	 * - size: the number of matchs to display in the carousel
+	 * - startIndex: the index of the first match to display in the carousel
+	 *
+	 * It creates a default match array with the first size matchs of the matchs array
 	 * @param matchs - an array of matchs
+	 * @param options - an object that contains the following properties:
 	 */
-	constructor(matchs) {
+	constructor(matchs, options) {
 		this.carouselProperty = { size: 3 };
 		this.all_matchs = matchs;
 		this.carouselProperty.startIndex = this.isOddNumber(
@@ -26,7 +31,7 @@ export default class Carousel {
 			  })();
 		const defaultMatch = matchs.slice(0, this.carouselProperty.size);
 		this.buildMatch(defaultMatch);
-		this.createCarousel();
+		this.createCarousel(options);
 	}
 
 	/**
@@ -46,32 +51,62 @@ export default class Carousel {
 	}
 
 	/**
-	 * Create a new Splide object and mount it to the DOM
+	 * Create a new Splide instance and mount it to the DOM
+	 * @param {} - carousel options; documentation => https://splidejs.com/guides/options/
 	 */
-	createCarousel() {
-		this.carousel = new Splide(".splide", {
-			updateOnMove: true,
-			type: "loop",
-			drag: false,
-			start: this.carouselProperty.startIndex,
-			direction: "ttb",
-			arrows: true,
-			height: MATCH_WRAPPER_HEIGHT,
-			resetProgress: false,
-			pagination: false,
-			clones: 1,
-			cloneStatus: false,
-			keyboard: true,
+	createCarousel({
+		arrows = true,
+		cloneStatus = false,
+		clones = 1,
+		direction = "ttb",
+		drag = false,
+		height = MATCH_WRAPPER_HEIGHT,
+		keyboard = false,
+		pagination = false,
+		resetProgress = false,
+		splide = ".splide",
+		start = this.carouselProperty.startIndex,
+		type = "loop",
+		updateOnMove = true,
+		wheel = false,
+		classes = {
+			arrows: "splide__arrows",
+			arrow: "splide__arrow",
+			prev: "splide__arrow--prev",
+			next: "splide__arrow--next",
+			pagination: "splide__pagination",
+			page: "splide__pagination__page",
+		},
+		customNextButtonElement = null,
+		customPrevButtonElement = null,
+	} = {}) {
+		this.carousel = new Splide(splide, {
+			arrows: arrows,
+			cloneStatus: cloneStatus,
+			clones: clones,
+			direction: direction,
+			drag: drag,
+			height: height,
+			keyboard: keyboard,
+			pagination: pagination,
+			resetProgress: resetProgress,
+			start: start,
+			type: type,
+			updateOnMove: updateOnMove,
+			wheel: wheel,
+			classes: classes,
 		}).mount();
 		this.carousel.on("moved", () => {
 			this.nextMatch();
 		});
-		BUTTON_NEXT.addEventListener("click", () => {
-			$(".splide__arrow--next").click();
-		});
-		BUTTON_PREV.addEventListener("click", () => {
-			$(".splide__arrow--prev").click();
-		});
+		if (customNextButtonElement != null)
+			customNextButtonElement.addEventListener("click", () => {
+				$(`.${classes.next}`).click();
+			});
+		if (customPrevButtonElement != null)
+			customPrevButtonElement.addEventListener("click", () => {
+				$(`.${classes.prev}`).click();
+			});
 	}
 
 	/**
