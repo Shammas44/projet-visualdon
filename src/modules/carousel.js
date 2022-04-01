@@ -143,7 +143,7 @@ export default class Carousel {
 				match_card.classList.remove("victory");
 			}
 		};
-		if (NodeList.prototype.isPrototypeOf(matchElement)) {
+		if (NodeList.prototype.isPrototypeOf(matchElements)) {
 			matchElements.forEach((element) => {
 				setter(element);
 			});
@@ -203,3 +203,5 @@ export default class Carousel {
 		return parseInt(number) % 2 != 0 ? true : false;
 	}
 }
+
+
