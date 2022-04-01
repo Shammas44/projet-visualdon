@@ -143,7 +143,7 @@ export default class Carousel {
 				match_card.classList.remove("victory");
 			}
 		};
-		if (NodeList.prototype.isPrototypeOf(matchElement)) {
+		if (NodeList.prototype.isPrototypeOf(matchElements)) {
 			matchElements.forEach((element) => {
 				setter(element);
 			});
