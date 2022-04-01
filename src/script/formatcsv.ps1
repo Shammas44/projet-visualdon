@@ -3,16 +3,14 @@ $matchs = import-csv -Path ./../../public/rawdata.csv -Delimiter ","
 $victory = 0
 $defeat = 0
 $egality = 0
-$i = 0
 $_goals = 0
-$export = {}
 
 Foreach ($match in $matchs) {
     $home_team = $match.home_team
     $away_team = $match.away_team
     $away_score = $match.away_score
     $home_score = $match.home_score
-    if ($home_team -eq 'Switzerland' || $away_score -eq 'Switzerland') {
+    if (($home_team -eq 'Switzerland') -or ($away_team -eq 'Switzerland')) {
         
         if ($home_team -eq 'Switzerland') {
             $_goals += $home_score
@@ -43,6 +41,9 @@ Foreach ($match in $matchs) {
         $match.egality = 100 * $egality / $total
         $match.defeat = 100 * $defeat / $total
         $match.goals = $_goals
+    }
+    else {
+        $match.date = 'null'
     }
 } 
 
