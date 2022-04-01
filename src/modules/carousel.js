@@ -1,5 +1,4 @@
 import { $ } from "./utility";
-import addGoal from "./counter";
 import { Splide } from "@splidejs/splide";
 import { MATCH_WRAPPER_HEIGHT, WRAPPER, FLAG_URL } from "./config";
 
@@ -19,9 +18,10 @@ export default class Carousel {
 	 * @param matchs - an array of matchs
 	 * @param options - an object that contains the following properties:
 	 */
-	constructor(matchs, options) {
+	constructor(matchs, addGoal, options) {
 		this.carouselProperty = { size: 3 };
 		this.all_matchs = matchs;
+		this.addGoal = addGoal;
 		this.carouselProperty.startIndex = this.isOddNumber(
 			this.carouselProperty.size
 		)
@@ -47,7 +47,7 @@ export default class Carousel {
 			const updated_match_wrapper = WRAPPER.querySelector("li:last-of-type");
 			this.setMatchData(match, key, updated_match_wrapper);
 		});
-		addGoal(this.all_matchs[this.carouselProperty.startIndex].goals);
+		this.addGoal(this.all_matchs[this.carouselProperty.startIndex].goals);
 	}
 
 	/**
@@ -203,5 +203,3 @@ export default class Carousel {
 		return parseInt(number) % 2 != 0 ? true : false;
 	}
 }
-
-

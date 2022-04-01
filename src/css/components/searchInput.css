@@ -1,0 +1,7 @@
+.wrapper--search-input {
+    margin: 0 auto;
+}
+
+#search-input {
+    order: 10;
+}
