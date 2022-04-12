@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "csv": "pwsh ./src/script/formatcsv.ps1 && pwsh ./src/script/fuse.ps1"
   },
   "author": "",
   "license": "ISC",

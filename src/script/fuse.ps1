@@ -1,6 +1,6 @@
 #!bin/pwsh
-$matchs = import-csv -Path ./../../public/foot.csv -Delimiter ","
-$country = import-csv -Path ./../../public/country.csv -Delimiter ","
+$matchs = import-csv -Path ./public/foot.csv -Delimiter ","
+$country = import-csv -Path ./public/country.csv -Delimiter ","
 
 Foreach ($match in $matchs) {
     $away_team = $match.away_team
@@ -13,5 +13,6 @@ Foreach ($match in $matchs) {
 } 
 
 $fileName = "fused"
-$csvFileName = "$fileName.csv"
+$csvFileName = "./public/$fileName.csv"
 $matchs | convertTo-csv | out-file  $csvFileName -Encoding utf8
+write-host "Done" -ForegroundColor Green -BackgroundColor Black

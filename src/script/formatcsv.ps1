@@ -1,11 +1,14 @@
 #!bin/pwsh
-$matchs = import-csv -Path ./../../public/rawdata.csv -Delimiter ","
+$matchs = import-csv -Path ./public/rawdata.csv -Delimiter ","
 $victory = 0
 $defeat = 0
 $egality = 0
 $_goals = 0
 
 Foreach ($match in $matchs) {
+    #$dateUnits = $match.date.split('-')
+    #$dateString = $dateUnits[1] + '.' + $dateUnits[0] + '.' + $dateUnits[2]
+    #$match.date = [DateTime]$dateString | get-date -Format dd.MM.yyyy
     $home_team = $match.home_team
     $away_team = $match.away_team
     $away_score = $match.away_score
@@ -47,6 +50,7 @@ Foreach ($match in $matchs) {
     }
 } 
 
+$selectedMatchs = $matchs | where-object { $_.date -ne 'null' }
 $fileName = "foot"
-$csvFileName = "$fileName.csv"
-$matchs | convertTo-csv | out-file  $csvFileName -Encoding unicode
+$csvFileName = "./public/$fileName.csv"
+$selectedMatchs | convertTo-csv | out-file  $csvFileName -Encoding unicode

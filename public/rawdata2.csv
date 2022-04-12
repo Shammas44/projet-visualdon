@@ -1,0 +1,811 @@
+﻿date;home_team;away_team;home_score;away_score;tournament;city;country;neutral;goals;victory;defeat;egality
+12.02.05;France;Switzerland;1;0;Friendly;Paris;France;FALSE;1;0;0;0
+08.03.08;Switzerland;France;1;2;Friendly;Geneva;Switzerland;FALSE;4;0;0;0
+05.04.08;Switzerland;Germany;5;3;Friendly;Basel;Switzerland;FALSE;12;0;0;0
+04.04.09;Germany;Switzerland;1;0;Friendly;Karlsruhe;Germany;FALSE;13;0;0;0
+03.04.10;Switzerland;Germany;2;3;Friendly;Basel;Switzerland;FALSE;18;0;0;0
+08.01.11;Switzerland;Hungary;2;0;Friendly;Zurich;Switzerland;FALSE;20;0;0;0
+26.03.11;Germany;Switzerland;6;2;Friendly;Stuttgart;Germany;FALSE;28;0;0;0
+23.04.11;Switzerland;France;5;2;Friendly;Geneva;Switzerland;FALSE;35;0;0;0
+07.05.11;Italy;Switzerland;2;2;Friendly;Milan;Italy;FALSE;39;0;0;0
+21.05.11;Switzerland;Italy;3;0;Friendly;La Chaux-de-Fonds;Switzerland;FALSE;42;0;0;0
+29.10.11;Hungary;Switzerland;9;0;Friendly;Budapest;Hungary;FALSE;51;0;0;0
+18.02.12;France;Switzerland;4;1;Friendly;Saint-Ouen;France;FALSE;56;0;0;0
+20.02.12;Belgium;Switzerland;9;2;Friendly;Antwerp;Belgium;FALSE;67;0;0;0
+05.05.12;Switzerland;Germany;1;2;Friendly;St. Gallen;Switzerland;FALSE;70;0;0;0
+09.03.13;Switzerland;France;1;4;Friendly;Geneva;Switzerland;FALSE;75;0;0;0
+04.05.13;Switzerland;Belgium;1;2;Friendly;Basel;Switzerland;FALSE;78;0;0;0
+18.05.13;Germany;Switzerland;1;2;Friendly;Freiburg;Germany;FALSE;81;0;0;0
+02.11.13;Belgium;Switzerland;2;0;Friendly;Verviers;Belgium;FALSE;83;0;0;0
+08.03.14;France;Switzerland;2;2;Friendly;Saint-Ouen;France;FALSE;87;0;0;0
+05.04.14;Italy;Switzerland;1;1;Friendly;Genoa;Italy;FALSE;89;0;0;0
+17.05.14;Switzerland;Italy;0;1;Friendly;Berne;Switzerland;FALSE;90;0;0;0
+31.01.15;Italy;Switzerland;3;1;Friendly;Turin;Italy;FALSE;94;0;0;0
+23.12.17;Switzerland;Austria;0;1;Friendly;Basel;Switzerland;FALSE;95;0;0;0
+26.12.17;Switzerland;Austria;3;2;Friendly;Zurich;Switzerland;FALSE;100;0;0;0
+09.05.18;Austria;Switzerland;5;1;Friendly;Vienna;Austria;FALSE;106;0;0;0
+12.05.18;Hungary;Switzerland;2;1;Friendly;Budapest;Hungary;FALSE;109;0;0;0
+29.02.20;Switzerland;France;0;2;Friendly;Geneva;Switzerland;FALSE;111;0;0;0
+28.03.20;Switzerland;Italy;3;0;Friendly;Berne;Switzerland;FALSE;114;0;0;0
+16.05.20;Switzerland;Netherlands;2;1;Friendly;Basel;Switzerland;FALSE;117;0;0;0
+06.06.20;Sweden;Switzerland;0;1;Friendly;Stockholm;Sweden;FALSE;118;0;0;0
+27.06.20;Switzerland;Germany;4;1;Friendly;Zurich;Switzerland;FALSE;123;0;0;0
+06.03.21;Italy;Switzerland;2;1;Friendly;Milan;Italy;FALSE;126;0;0;0
+01.05.21;Switzerland;Austria;2;2;Friendly;St. Gallen;Switzerland;FALSE;130;0;0;0
+06.11.21;Switzerland;Italy;1;1;Friendly;Geneva;Switzerland;FALSE;132;0;0;0
+26.03.22;Germany;Switzerland;2;2;Friendly;Frankfurt am Main;Germany;FALSE;136;0;0;0
+11.06.22;Austria;Switzerland;7;1;Friendly;Vienna;Austria;FALSE;144;0;0;0
+15.06.22;Hungary;Switzerland;1;1;Friendly;Budapest;Hungary;FALSE;146;0;0;0
+19.11.22;Switzerland;Netherlands;5;0;Friendly;Berne;Switzerland;FALSE;151;0;0;0
+03.12.22;Italy;Switzerland;2;2;Friendly;Bologna;Italy;FALSE;155;0;0;0
+21.01.23;Switzerland;Austria;2;0;Friendly;Geneva;Switzerland;FALSE;157;0;0;0
+11.03.23;Switzerland;Hungary;1;6;Friendly;Lausanne;Switzerland;FALSE;164;0;0;0
+22.04.23;France;Switzerland;2;2;Friendly;Vincennes;France;FALSE;168;0;0;0
+03.06.23;Switzerland;Germany;1;2;Friendly;Basel;Switzerland;FALSE;171;0;0;0
+17.06.23;Denmark;Switzerland;3;2;Friendly;Copenhagen;Denmark;FALSE;176;0;0;0
+21.06.23;Norway;Switzerland;2;2;Friendly;Kristiania;Norway;FALSE;180;0;0;0
+25.11.23;Netherlands;Switzerland;4;1;Friendly;Amsterdam;Netherlands;FALSE;185;0;0;0
+23.03.24;Switzerland;France;3;0;Friendly;Geneva;Switzerland;FALSE;188;0;0;0
+21.04.24;Switzerland;Denmark;2;0;Friendly;Basel;Switzerland;FALSE;190;0;0;0
+18.05.24;Switzerland;Hungary;4;2;Friendly;Zurich;Switzerland;FALSE;196;0;0;0
+14.12.24;Germany;Switzerland;1;1;Friendly;Stuttgart;Germany;FALSE;198;0;0;0
+22.03.25;Austria;Switzerland;2;0;Friendly;Vienna;Austria;FALSE;200;0;0;0
+25.03.25;Hungary;Switzerland;5;0;Friendly;Budapest;Hungary;FALSE;205;0;0;0
+19.04.25;Switzerland;Netherlands;4;1;Friendly;Zurich;Switzerland;FALSE;210;0;0;0
+24.05.25;Switzerland;Belgium;0;0;Friendly;Lausanne;Switzerland;FALSE;210;0;0;0
+01.06.25;Switzerland;Spain;0;3;Friendly;Berne;Switzerland;FALSE;213;0;0;0
+25.10.25;Switzerland;Germany;0;4;Friendly;Basel;Switzerland;FALSE;217;0;0;0
+08.11.25;Switzerland;Austria;2;0;Friendly;Berne;Switzerland;FALSE;219;0;0;0
+28.03.26;Netherlands;Switzerland;5;0;Friendly;Amsterdam;Netherlands;FALSE;224;0;0;0
+18.04.26;Switzerland;Italy;1;1;Friendly;Zurich;Switzerland;FALSE;226;0;0;0
+25.04.26;France;Switzerland;1;0;Friendly;Colombes;France;FALSE;227;0;0;0
+09.05.26;Italy;Switzerland;3;2;Friendly;Milan;Italy;FALSE;232;0;0;0
+10.10.26;Austria;Switzerland;7;1;Friendly;Vienna;Austria;FALSE;240;0;0;0
+12.12.26;Germany;Switzerland;2;3;Friendly;Munich;Germany;FALSE;245;0;0;0
+30.01.27;Switzerland;Italy;1;5;Friendly;Geneva;Switzerland;FALSE;251;0;0;0
+17.04.27;Spain;Switzerland;1;0;Friendly;Santander;Spain;FALSE;252;0;0;0
+29.05.27;Switzerland;Austria;1;4;Friendly;Zurich;Switzerland;FALSE;257;0;0;0
+06.11.27;Switzerland;Sweden;2;2;Friendly;Zurich;Switzerland;FALSE;261;0;0;0
+01.01.28;Italy;Switzerland;3;2;International Cup;Genoa;Italy;FALSE;266;0;0;0
+11.03.28;Switzerland;France;4;3;Friendly;Lausanne;Switzerland;FALSE;273;0;0;0
+15.04.28;Switzerland;Germany;2;3;Friendly;Berne;Switzerland;FALSE;278;0;0;0
+06.05.28;Switzerland;Netherlands;2;1;Friendly;Basel;Switzerland;FALSE;281;0;0;0
+17.08.28;Belarus;Switzerland;6;3;Friendly;Moscow;Soviet Union;TRUE;290;0;0;0
+14.10.28;Switzerland;Italy;2;3;International Cup;Zurich;Switzerland;FALSE;295;0;0;0
+28.10.28;Austria;Switzerland;2;0;International Cup;Vienna;Austria;FALSE;297;0;0;0
+01.11.28;Hungary;Switzerland;3;1;International Cup;Budapest;Hungary;FALSE;301;0;0;0
+10.02.29;Germany;Switzerland;7;1;Friendly;Mannheim;Germany;FALSE;309;0;0;0
+17.03.29;Netherlands;Switzerland;3;2;Friendly;Amsterdam;Netherlands;FALSE;314;0;0;0
+14.04.29;Switzerland;Hungary;4;5;International Cup;Berne;Switzerland;FALSE;323;0;0;0
+05.05.29;Switzerland;Czechoslovakia;1;4;International Cup;Lausanne;Switzerland;FALSE;328;0;0;0
+06.10.29;Czechoslovakia;Switzerland;5;0;International Cup;Prague;Czechoslovakia;FALSE;333;0;0;0
+27.10.29;Switzerland;Austria;1;3;International Cup;Berne;Switzerland;FALSE;337;0;0;0
+09.02.30;Italy;Switzerland;4;2;Friendly;Rome;Italy;FALSE;343;0;0;0
+23.03.30;France;Switzerland;3;3;Friendly;Colombes;France;FALSE;349;0;0;0
+13.04.30;Switzerland;Hungary;2;2;Friendly;Basel;Switzerland;FALSE;353;0;0;0
+04.05.30;Switzerland;Germany;0;5;Friendly;Zurich;Switzerland;FALSE;358;0;0;0
+15.06.30;Sweden;Switzerland;1;0;Friendly;Stockholm;Sweden;FALSE;359;0;0;0
+19.06.30;Norway;Switzerland;3;0;Friendly;Oslo;Norway;FALSE;362;0;0;0
+02.11.30;Switzerland;Netherlands;6;3;Friendly;Zurich;Switzerland;FALSE;371;0;0;0
+29.03.31;Switzerland;Italy;1;1;International Cup;Berne;Switzerland;FALSE;373;0;0;0
+12.04.31;Hungary;Switzerland;6;2;International Cup;Budapest;Hungary;FALSE;381;0;0;0
+24.05.31;Switzerland;Scotland;2;3;Friendly;Geneva;Switzerland;FALSE;386;0;0;0
+13.06.31;Czechoslovakia;Switzerland;7;3;International Cup;Prague;Czechoslovakia;FALSE;396;0;0;0
+16.06.31;Austria;Switzerland;2;0;Friendly;Vienna;Austria;FALSE;398;0;0;0
+29.11.31;Switzerland;Austria;1;8;International Cup;Basel;Switzerland;FALSE;407;0;0;0
+06.12.31;Belgium;Switzerland;2;1;Friendly;Brussels;Belgium;FALSE;410;0;0;0
+14.02.32;Italy;Switzerland;3;0;International Cup;Naples;Italy;FALSE;413;0;0;0
+06.03.32;Germany;Switzerland;2;0;Friendly;Leipzig;Germany;FALSE;415;0;0;0
+20.03.32;Switzerland;France;3;3;Friendly;Berne;Switzerland;FALSE;421;0;0;0
+17.04.32;Switzerland;Czechoslovakia;5;1;International Cup;Zurich;Switzerland;FALSE;427;0;0;0
+19.06.32;Switzerland;Hungary;3;1;International Cup;Berne;Switzerland;FALSE;431;0;0;0
+23.10.32;Austria;Switzerland;3;1;International Cup;Vienna;Austria;FALSE;435;0;0;0
+06.11.32;Switzerland;Sweden;2;1;Friendly;Basel;Switzerland;FALSE;438;0;0;0
+22.01.33;Netherlands;Switzerland;0;2;Friendly;Amsterdam;Netherlands;FALSE;440;0;0;0
+12.03.33;Switzerland;Belgium;3;3;Friendly;Zurich;Switzerland;FALSE;446;0;0;0
+02.04.33;Switzerland;Italy;0;3;International Cup;Geneva;Switzerland;FALSE;449;0;0;0
+20.05.33;Switzerland;England;0;4;Friendly;Berne;Switzerland;FALSE;458;0;0;0
+17.09.33;Hungary;Switzerland;3;0;International Cup;Budapest;Hungary;FALSE;461;0;0;0
+29.10.33;Switzerland;Romania;2;2;FIFA World Cup qualification;Berne;Switzerland;FALSE;469;0;0;0
+19.11.33;Switzerland;Germany;0;2;Friendly;Zurich;Switzerland;FALSE;471;0;0;0
+03.12.33;Italy;Switzerland;5;2;International Cup;Florence;Italy;FALSE;478;0;0;0
+11.03.34;France;Switzerland;0;1;Friendly;Paris;France;FALSE;479;0;0;0
+25.03.34;Switzerland;Austria;2;3;International Cup;Geneva;Switzerland;FALSE;484;0;0;0
+27.05.34;Netherlands;Switzerland;2;3;FIFA World Cup;Milan;Italy;TRUE;489;0;0;0
+31.05.34;Czechoslovakia;Switzerland;3;2;FIFA World Cup;Turin;Italy;TRUE;494;0;0;0
+14.10.34;Switzerland;Czechoslovakia;2;2;International Cup;Geneva;Switzerland;FALSE;498;0;0;0
+04.11.34;Switzerland;Netherlands;2;4;Friendly;Berne;Switzerland;FALSE;504;0;0;0
+11.11.34;Austria;Switzerland;3;0;International Cup;Vienna;Austria;FALSE;507;0;0;0
+27.01.35;Germany;Switzerland;4;0;Friendly;Stuttgart;Germany;FALSE;511;0;0;0
+17.03.35;Czechoslovakia;Switzerland;3;1;International Cup;Prague;Czechoslovakia;FALSE;515;0;0;0
+14.04.35;Switzerland;Hungary;6;2;International Cup;Zurich;Switzerland;FALSE;523;0;0;0
+05.05.35;Switzerland;Republic of Ireland;1;0;Friendly;Basel;Switzerland;FALSE;524;0;0;0
+30.05.35;Belgium;Switzerland;2;2;Friendly;Brussels;Belgium;FALSE;528;0;0;0
+27.10.35;Switzerland;France;2;1;Friendly;Geneva;Switzerland;FALSE;531;0;0;0
+03.11.35;Switzerland;Norway;2;0;Friendly;Zurich;Switzerland;FALSE;533;0;0;0
+10.11.35;Hungary;Switzerland;6;1;Friendly;Budapest;Hungary;FALSE;540;0;0;0
+17.03.36;Republic of Ireland;Switzerland;1;0;Friendly;Dublin;Irish Free State;FALSE;541;0;0;0
+05.04.36;Switzerland;Italy;1;2;Friendly;Zurich;Switzerland;FALSE;544;0;0;0
+03.05.36;Switzerland;Spain;0;2;Friendly;Berne;Switzerland;FALSE;546;0;0;0
+24.05.36;Switzerland;Belgium;1;1;Friendly;Basel;Switzerland;FALSE;548;0;0;0
+18.06.36;Norway;Switzerland;1;2;Friendly;Oslo;Norway;FALSE;551;0;0;0
+21.06.36;Sweden;Switzerland;5;2;Friendly;Stockholm;Sweden;FALSE;558;0;0;0
+25.10.36;Italy;Switzerland;4;2;International Cup;Milan;Italy;FALSE;564;0;0;0
+08.11.36;Switzerland;Austria;1;3;International Cup;Zurich;Switzerland;FALSE;568;0;0;0
+21.02.37;Czechoslovakia;Switzerland;5;3;International Cup;Prague;Czechoslovakia;FALSE;576;0;0;0
+07.03.37;Netherlands;Switzerland;2;1;Friendly;Amsterdam;Netherlands;FALSE;579;0;0;0
+11.04.37;Switzerland;Hungary;1;5;International Cup;Basel;Switzerland;FALSE;585;0;0;0
+18.04.37;Belgium;Switzerland;1;2;Friendly;Brussels;Belgium;FALSE;588;0;0;0
+02.05.37;Switzerland;Germany;0;1;Friendly;Zurich;Switzerland;FALSE;589;0;0;0
+17.05.37;Switzerland;Republic of Ireland;0;1;Friendly;Berne;Switzerland;FALSE;590;0;0;0
+19.09.37;Austria;Switzerland;4;3;International Cup;Vienna;Austria;FALSE;597;0;0;0
+10.10.37;France;Switzerland;2;1;Friendly;Paris;France;FALSE;600;0;0;0
+31.10.37;Switzerland;Italy;2;2;International Cup;Geneva;Switzerland;FALSE;604;0;0;0
+14.11.37;Hungary;Switzerland;2;0;International Cup;Budapest;Hungary;FALSE;606;0;0;0
+06.02.38;Germany;Switzerland;1;1;Friendly;Cologne;Germany;FALSE;608;0;0;0
+13.03.38;Switzerland;Poland;3;3;Friendly;Zurich;Switzerland;FALSE;614;0;0;0
+03.04.38;Switzerland;Czechoslovakia;4;0;International Cup;Basel;Switzerland;FALSE;618;0;0;0
+01.05.38;Switzerland;Portugal;2;1;FIFA World Cup qualification;Milan;Italy;TRUE;621;0;0;0
+08.05.38;Switzerland;Belgium;0;3;Friendly;Lausanne;Switzerland;FALSE;624;0;0;0
+21.05.38;Switzerland;England;2;1;Friendly;Zurich;Switzerland;FALSE;627;0;0;0
+04.06.38;Germany;Switzerland;1;1;FIFA World Cup;Paris;France;TRUE;629;0;0;0
+09.06.38;Germany;Switzerland;2;4;FIFA World Cup;Paris;France;TRUE;635;0;0;0
+12.06.38;Hungary;Switzerland;2;0;FIFA World Cup;Lille;France;TRUE;637;0;0;0
+18.09.38;Republic of Ireland;Switzerland;4;0;Friendly;Dublin;√âire;FALSE;641;0;0;0
+06.11.38;Switzerland;Portugal;1;0;Friendly;Lausanne;Switzerland;FALSE;642;0;0;0
+20.11.38;Italy;Switzerland;2;0;Friendly;Bologna;Italy;FALSE;644;0;0;0
+12.02.39;Portugal;Switzerland;2;4;Friendly;Lisbon;Portugal;FALSE;650;0;0;0
+02.04.39;Switzerland;Hungary;3;1;Friendly;Zurich;Switzerland;FALSE;654;0;0;0
+07.05.39;Switzerland;Netherlands;2;1;Friendly;Berne;Switzerland;FALSE;657;0;0;0
+14.05.39;Belgium;Switzerland;1;2;Friendly;Li√®ge;Belgium;FALSE;660;0;0;0
+04.06.39;Poland;Switzerland;1;1;Friendly;Warsaw;Poland;FALSE;662;0;0;0
+12.11.39;Switzerland;Italy;3;1;Friendly;Zurich;Switzerland;FALSE;666;0;0;0
+03.03.40;Italy;Switzerland;1;1;Friendly;Turin;Italy;FALSE;668;0;0;0
+31.03.40;Hungary;Switzerland;3;0;Friendly;Budapest;Hungary;FALSE;671;0;0;0
+02.04.40;Croatia;Switzerland;4;0;Friendly;Zagreb;Croatia;FALSE;675;0;0;0
+21.04.40;Switzerland;Croatia;0;1;Friendly;Berne;Switzerland;FALSE;676;0;0;0
+09.03.41;Germany;Switzerland;4;2;Friendly;Stuttgart;Germany;FALSE;682;0;0;0
+20.04.41;Switzerland;Germany;2;1;Friendly;Berne;Switzerland;FALSE;685;0;0;0
+16.11.41;Switzerland;Hungary;1;2;Friendly;Zurich;Switzerland;FALSE;688;0;0;0
+28.12.41;Spain;Switzerland;3;2;Friendly;Valencia;Spain;FALSE;693;0;0;0
+01.01.42;Portugal;Switzerland;3;0;Friendly;Lisbon;Portugal;FALSE;696;0;0;0
+01.02.42;Germany;Switzerland;1;2;Friendly;Vienna;Germany;FALSE;699;0;0;0
+08.03.42;France;Switzerland;0;2;Friendly;Marseille;France;FALSE;701;0;0;0
+18.10.42;Switzerland;Germany;3;5;Friendly;Berne;Switzerland;FALSE;709;0;0;0
+01.11.42;Hungary;Switzerland;3;0;Friendly;Budapest;Hungary;FALSE;712;0;0;0
+15.11.42;Switzerland;Sweden;3;1;Friendly;Zurich;Switzerland;FALSE;716;0;0;0
+04.04.43;Switzerland;Croatia;1;0;Friendly;Zurich;Switzerland;FALSE;717;0;0;0
+16.05.43;Switzerland;Hungary;1;3;Friendly;Geneva;Switzerland;FALSE;721;0;0;0
+14.06.43;Sweden;Switzerland;1;0;Friendly;Solna;Sweden;FALSE;722;0;0;0
+08.04.45;Switzerland;France;1;0;Friendly;Lausanne;Switzerland;FALSE;723;0;0;0
+21.05.45;Switzerland;Portugal;1;0;Friendly;Basel;Switzerland;FALSE;724;0;0;0
+21.07.45;Switzerland;England;3;1;Friendly;Berne;Switzerland;FALSE;728;0;0;0
+11.11.45;Switzerland;Italy;4;4;Friendly;Zurich;Switzerland;FALSE;736;0;0;0
+25.11.45;Switzerland;Sweden;3;0;Friendly;Geneva;Switzerland;FALSE;739;0;0;0
+11.05.46;England;Switzerland;4;1;Friendly;London;England;FALSE;744;0;0;0
+15.05.46;Scotland;Switzerland;3;1;Friendly;Glasgow;Scotland;FALSE;748;0;0;0
+07.07.46;Sweden;Switzerland;7;2;Friendly;Solna;Sweden;FALSE;757;0;0;0
+14.09.46;Czechoslovakia;Switzerland;3;2;Friendly;Prague;Czechoslovakia;FALSE;762;0;0;0
+10.11.46;Switzerland;Austria;1;0;Friendly;Berne;Switzerland;FALSE;763;0;0;0
+05.01.47;Portugal;Switzerland;2;2;Friendly;Lisbon;Portugal;FALSE;767;0;0;0
+27.04.47;Italy;Switzerland;5;2;Friendly;Florence;Italy;FALSE;774;0;0;0
+18.05.47;Switzerland;England;1;0;Friendly;Zurich;Switzerland;FALSE;775;0;0;0
+08.06.47;Switzerland;France;1;2;Friendly;Lausanne;Switzerland;FALSE;778;0;0;0
+21.09.47;Netherlands;Switzerland;6;2;Friendly;Amsterdam;Netherlands;FALSE;786;0;0;0
+02.11.47;Switzerland;Belgium;4;0;Friendly;Geneva;Switzerland;FALSE;790;0;0;0
+18.04.48;Austria;Switzerland;3;1;Friendly;Vienna;Austria;FALSE;794;0;0;0
+21.04.48;Hungary;Switzerland;7;4;International Cup;Budapest;Hungary;FALSE;805;0;0;0
+17.05.48;Switzerland;Scotland;2;1;Friendly;Berne;Switzerland;FALSE;808;0;0;0
+20.06.48;Switzerland;Spain;3;3;Friendly;Zurich;Switzerland;FALSE;814;0;0;0
+10.10.48;Switzerland;Czechoslovakia;1;1;International Cup;Basel;Switzerland;FALSE;816;0;0;0
+02.12.48;England;Switzerland;6;0;Friendly;London;England;FALSE;822;0;0;0
+05.12.48;Republic of Ireland;Switzerland;0;1;Friendly;Dublin;√âire;FALSE;823;0;0;0
+03.04.49;Switzerland;Austria;1;2;International Cup;Lausanne;Switzerland;FALSE;826;0;0;0
+26.05.49;Switzerland;Wales;4;0;Friendly;Berne;Switzerland;FALSE;830;0;0;0
+04.06.49;France;Switzerland;4;2;Friendly;Colombes;France;FALSE;836;0;0;0
+26.06.49;Switzerland;Luxembourg;5;2;FIFA World Cup qualification;Zurich;Switzerland;FALSE;843;0;0;0
+18.09.49;Luxembourg;Switzerland;2;3;FIFA World Cup qualification;Luxembourg;Luxembourg;FALSE;848;0;0;0
+02.10.49;Belgium;Switzerland;3;0;Friendly;Brussels;Belgium;FALSE;851;0;0;0
+19.03.50;Austria;Switzerland;3;3;International Cup;Vienna;Austria;FALSE;857;0;0;0
+26.04.50;Scotland;Switzerland;3;1;Friendly;Glasgow;Scotland;FALSE;861;0;0;0
+28.06.50;Brazil;Switzerland;2;2;FIFA World Cup;S√£o Paulo;Brazil;FALSE;872;0;0;0
+02.07.50;Mexico;Switzerland;1;2;FIFA World Cup;Porto Alegre;Brazil;TRUE;875;0;0;0
+15.10.50;Switzerland;Netherlands;7;5;Friendly;Basel;Switzerland;FALSE;887;0;0;0
+12.11.50;Switzerland;Sweden;4;2;Friendly;Geneva;Switzerland;FALSE;893;0;0;0
+22.11.50;Germany;Switzerland;1;0;Friendly;Stuttgart;Germany;FALSE;894;0;0;0
+18.02.51;Spain;Switzerland;6;3;Friendly;Madrid;Spain;FALSE;903;0;0;0
+15.04.51;Switzerland;Germany;2;3;Friendly;Zurich;Switzerland;FALSE;908;0;0;0
+16.05.51;Wales;Switzerland;3;2;Friendly;Wrexham;Wales;FALSE;913;0;0;0
+14.10.51;Switzerland;France;1;2;Friendly;Geneva;Switzerland;FALSE;926;0;0;0
+25.11.51;Switzerland;Italy;1;1;International Cup;Lugano;Switzerland;FALSE;928;0;0;0
+28.05.52;Switzerland;England;0;3;Friendly;Zurich;Switzerland;FALSE;931;0;0;0
+01.06.52;Turkey;Switzerland;1;5;Friendly;Ankara;Turkey;FALSE;937;0;0;0
+22.06.52;Switzerland;Austria;1;1;Friendly;Geneva;Switzerland;FALSE;939;0;0;0
+20.09.52;Switzerland;Hungary;2;4;International Cup;Berne;Switzerland;FALSE;945;0;0;0
+09.11.52;Germany;Switzerland;5;1;Friendly;Augsburg;Germany;FALSE;951;0;0;0
+28.12.52;Italy;Switzerland;2;0;International Cup;Palermo;Italy;FALSE;953;0;0;0
+22.03.53;Netherlands;Switzerland;1;2;Friendly;Amsterdam;Netherlands;FALSE;956;0;0;0
+25.05.53;Switzerland;Turkey;1;2;Friendly;Berne;Switzerland;FALSE;959;0;0;0
+27.06.53;Switzerland;Denmark;1;4;Friendly;Basel;Switzerland;FALSE;964;0;0;0
+20.09.53;Czechoslovakia;Switzerland;5;0;International Cup;Prague;Czechoslovakia;FALSE;969;0;0;0
+11.11.53;France;Switzerland;2;4;Friendly;Colombes;France;FALSE;975;0;0;0
+22.11.53;Switzerland;Belgium;2;2;Friendly;Zurich;Switzerland;FALSE;979;0;0;0
+25.04.54;Switzerland;Germany;3;5;Friendly;Basel;Switzerland;FALSE;987;0;0;0
+23.05.54;Switzerland;Uruguay;3;3;Friendly;Lausanne;Switzerland;FALSE;993;0;0;0
+30.05.54;Switzerland;Netherlands;3;1;Friendly;Zurich;Switzerland;FALSE;997;0;0;0
+17.06.54;Switzerland;Italy;2;1;FIFA World Cup;Lausanne;Switzerland;FALSE;1031;0;0;0
+20.06.54;Switzerland;England;0;2;FIFA World Cup;Berne;Switzerland;FALSE;1075;0;0;0
+23.06.54;Switzerland;Italy;4;1;FIFA World Cup;Basel;Switzerland;FALSE;1089;0;0;0
+26.06.54;Switzerland;Austria;5;7;FIFA World Cup;Lausanne;Switzerland;FALSE;1107;0;0;0
+19.09.54;Denmark;Switzerland;1;1;Friendly;Copenhagen;Denmark;FALSE;1139;0;0;0
+10.10.54;Hungary;Switzerland;3;0;Friendly;Budapest;Hungary;FALSE;1142;0;0;0
+01.05.55;Switzerland;Austria;2;3;International Cup;Berne;Switzerland;FALSE;1147;0;0;0
+19.05.55;Netherlands;Switzerland;4;1;Friendly;Rotterdam;Netherlands;FALSE;1152;0;0;0
+19.06.55;Switzerland;Spain;0;3;Friendly;Geneva;Switzerland;FALSE;1155;0;0;0
+17.09.55;Switzerland;Hungary;4;5;International Cup;Lausanne;Switzerland;FALSE;1164;0;0;0
+09.10.55;Switzerland;France;1;2;Friendly;Basel;Switzerland;FALSE;1167;0;0;0
+11.03.56;Belgium;Switzerland;1;3;Friendly;Brussels;Belgium;FALSE;1171;0;0;0
+11.04.56;Switzerland;Brazil;1;1;Friendly;Zurich;Switzerland;FALSE;1173;0;0;0
+10.05.56;Switzerland;Czechoslovakia;1;6;International Cup;Geneva;Switzerland;FALSE;1182;0;0;0
+15.09.56;Switzerland;Netherlands;2;3;Friendly;Lausanne;Switzerland;FALSE;1187;0;0;0
+11.11.56;Switzerland;Italy;1;1;International Cup;Berne;Switzerland;FALSE;1189;0;0;0
+21.11.56;Germany;Switzerland;1;3;Friendly;Frankfurt am Main;Germany;FALSE;1193;0;0;0
+10.03.57;Spain;Switzerland;2;2;FIFA World Cup qualification;Madrid;Spain;FALSE;1197;0;0;0
+14.04.57;Austria;Switzerland;4;0;International Cup;Vienna;Austria;FALSE;1201;0;0;0
+19.05.57;Switzerland;Scotland;1;2;FIFA World Cup qualification;Basel;Switzerland;FALSE;1204;0;0;0
+06.11.57;Scotland;Switzerland;3;2;FIFA World Cup qualification;Glasgow;Scotland;FALSE;1209;0;0;0
+24.11.57;Switzerland;Spain;1;4;FIFA World Cup qualification;Lausanne;Switzerland;FALSE;1214;0;0;0
+16.04.58;France;Switzerland;0;0;Friendly;Paris;France;FALSE;1214;0;0;0
+07.05.58;Sweden;Switzerland;3;2;Friendly;Helsingborg;Sweden;FALSE;1219;0;0;0
+26.05.58;Switzerland;Belgium;0;2;Friendly;Zurich;Switzerland;FALSE;1221;0;0;0
+20.09.58;Czechoslovakia;Switzerland;2;1;International Cup;Bratislava;Czechoslovakia;FALSE;1224;0;0;0
+02.11.58;Netherlands;Switzerland;2;0;Friendly;Rotterdam;Netherlands;FALSE;1226;0;0;0
+16.05.59;Switzerland;Portugal;4;3;Friendly;Geneva;Switzerland;FALSE;1239;0;0;0
+04.10.59;Switzerland;Germany;0;4;Friendly;Berne;Switzerland;FALSE;1243;0;0;0
+25.10.59;Hungary;Switzerland;8;0;International Cup;Budapest;Hungary;FALSE;1251;0;0;0
+06.01.60;Italy;Switzerland;3;0;International Cup;Naples;Italy;FALSE;1254;0;0;0
+27.03.60;Belgium;Switzerland;3;1;Friendly;Brussels;Belgium;FALSE;1258;0;0;0
+06.04.60;Switzerland;Chile;4;2;Friendly;Basel;Switzerland;FALSE;1264;0;0;0
+18.05.60;Switzerland;Netherlands;3;1;Friendly;Zurich;Switzerland;FALSE;1268;0;0;0
+12.10.60;Switzerland;France;6;2;Friendly;Basel;Switzerland;FALSE;1276;0;0;0
+20.11.60;Belgium;Switzerland;2;4;FIFA World Cup qualification;Brussels;Belgium;FALSE;1282;0;0;0
+20.05.61;Switzerland;Belgium;2;1;FIFA World Cup qualification;Lausanne;Switzerland;FALSE;1285;0;0;0
+28.05.61;Sweden;Switzerland;4;0;FIFA World Cup qualification;Solna;Sweden;FALSE;1289;0;0;0
+29.10.61;Switzerland;Sweden;3;2;FIFA World Cup qualification;Berne;Switzerland;FALSE;1294;0;0;0
+12.11.61;Switzerland;Sweden;2;1;FIFA World Cup qualification;Berlin;Germany;TRUE;1297;0;0;0
+09.05.62;England;Switzerland;3;1;Friendly;London;England;FALSE;1301;0;0;0
+30.05.62;Chile;Switzerland;3;1;FIFA World Cup;Santiago;Chile;FALSE;1305;0;0;0
+03.06.62;Germany;Switzerland;2;1;FIFA World Cup;Santiago;Chile;TRUE;1308;0;0;0
+07.06.62;Italy;Switzerland;3;0;FIFA World Cup;Santiago;Chile;TRUE;1311;0;0;0
+11.11.62;Netherlands;Switzerland;3;1;UEFA Euro qualification;Amsterdam;Netherlands;FALSE;1315;0;0;0
+23.12.62;Germany;Switzerland;5;1;Friendly;Karlsruhe;Germany;FALSE;1321;0;0;0
+13.01.63;Morocco;Switzerland;1;0;Friendly;Casablanca;Morocco;FALSE;1322;0;0;0
+31.03.63;Switzerland;Netherlands;1;1;UEFA Euro qualification;Berne;Switzerland;FALSE;1324;0;0;0
+05.06.63;Switzerland;England;1;8;Friendly;Basel;Switzerland;FALSE;1333;0;0;0
+03.11.63;Switzerland;Norway;0;2;Friendly;Zurich;Switzerland;FALSE;1335;0;0;0
+11.11.63;France;Switzerland;2;2;Friendly;Paris;France;FALSE;1339;0;0;0
+15.04.64;Switzerland;Belgium;2;0;Friendly;Geneva;Switzerland;FALSE;1341;0;0;0
+29.04.64;Switzerland;Portugal;2;3;Friendly;Zurich;Switzerland;FALSE;1346;0;0;0
+10.05.64;Switzerland;Italy;1;3;Friendly;Lausanne;Switzerland;FALSE;1350;0;0;0
+01.07.64;Norway;Switzerland;3;2;Friendly;Bergen;Norway;FALSE;1355;0;0;0
+04.10.64;Switzerland;Hungary;0;2;Friendly;Berne;Switzerland;FALSE;1357;0;0;0
+14.10.64;Northern Ireland;Switzerland;1;0;FIFA World Cup qualification;Belfast;Northern Ireland;FALSE;1358;0;0;0
+14.11.64;Switzerland;Northern Ireland;2;1;FIFA World Cup qualification;Lausanne;Switzerland;FALSE;1361;0;0;0
+17.03.65;Israel;Switzerland;0;0;Friendly;Jaffa;Israel;FALSE;1361;0;0;0
+11.04.65;Albania;Switzerland;0;2;FIFA World Cup qualification;Tirana;Albania;FALSE;1363;0;0;0
+02.05.65;Switzerland;Albania;1;0;FIFA World Cup qualification;Geneva;Switzerland;FALSE;1364;0;0;0
+26.05.65;Switzerland;Germany;0;1;Friendly;Basel;Switzerland;FALSE;1365;0;0;0
+17.10.65;Netherlands;Switzerland;0;0;FIFA World Cup qualification;Amsterdam;Netherlands;FALSE;1365;0;0;0
+14.11.65;Switzerland;Netherlands;2;1;FIFA World Cup qualification;Berne;Switzerland;FALSE;1368;0;0;0
+20.04.66;Switzerland;Russia;2;2;Friendly;Basel;Switzerland;FALSE;1372;0;0;0
+05.06.66;Hungary;Switzerland;3;1;Friendly;Budapest;Hungary;FALSE;1376;0;0;0
+19.06.66;Switzerland;Mexico;1;1;Friendly;Lausanne;Switzerland;FALSE;1378;0;0;0
+12.07.66;Germany;Switzerland;5;0;FIFA World Cup;Sheffield;England;TRUE;1383;0;0;0
+15.07.66;Spain;Switzerland;2;1;FIFA World Cup;Sheffield;England;TRUE;1386;0;0;0
+19.07.66;Argentina;Switzerland;2;0;FIFA World Cup;Sheffield;England;TRUE;1388;0;0;0
+22.10.66;Belgium;Switzerland;1;0;Friendly;Bruges;Belgium;FALSE;1389;0;0;0
+02.11.66;Romania;Switzerland;4;2;UEFA Euro qualification;Bucharest;Romania;FALSE;1395;0;0;0
+05.01.67;Mexico;Switzerland;3;0;Friendly;Mexico City;Mexico;FALSE;1398;0;0;0
+08.01.67;Mexico;Switzerland;0;2;Friendly;Guadalajara;Mexico;FALSE;1400;0;0;0
+03.05.67;Switzerland;Czechoslovakia;1;2;Friendly;Basel;Switzerland;FALSE;1403;0;0;0
+24.05.67;Switzerland;Romania;7;1;UEFA Euro qualification;Zurich;Switzerland;FALSE;1411;0;0;0
+01.10.67;Russia;Switzerland;2;2;Friendly;Moscow;Soviet Union;FALSE;1415;0;0;0
+08.11.67;Switzerland;Cyprus;5;0;UEFA Euro qualification;Lugano;Switzerland;FALSE;1420;0;0;0
+18.11.67;Switzerland;Italy;2;2;UEFA Euro qualification;Berne;Switzerland;FALSE;1424;0;0;0
+23.12.67;Italy;Switzerland;4;0;UEFA Euro qualification;Cagliari;Italy;FALSE;1428;0;0;0
+14.02.68;Israel;Switzerland;2;1;Friendly;Jaffa;Israel;FALSE;1431;0;0;0
+17.02.68;Cyprus;Switzerland;2;1;UEFA Euro qualification;Nicosia;Cyprus;FALSE;1434;0;0;0
+17.04.68;Switzerland;Germany;0;0;Friendly;Basel;Switzerland;FALSE;1434;0;0;0
+22.09.68;Switzerland;Austria;1;0;Friendly;Berne;Switzerland;FALSE;1435;0;0;0
+12.10.68;Switzerland;Greece;1;0;FIFA World Cup qualification;Basel;Switzerland;FALSE;1436;0;0;0
+23.11.68;Romania;Switzerland;2;0;FIFA World Cup qualification;Bucharest;Romania;FALSE;1438;0;0;0
+26.03.69;Spain;Switzerland;1;0;Friendly;Valencia;Spain;FALSE;1439;0;0;0
+16.04.69;Portugal;Switzerland;0;2;FIFA World Cup qualification;Lisbon;Portugal;FALSE;1441;0;0;0
+14.05.69;Switzerland;Romania;0;1;FIFA World Cup qualification;Lausanne;Switzerland;FALSE;1442;0;0;0
+24.09.69;Turkey;Switzerland;3;0;Friendly;Istanbul;Turkey;FALSE;1445;0;0;0
+15.10.69;Greece;Switzerland;4;1;FIFA World Cup qualification;Salonica;Greece;FALSE;1450;0;0;0
+02.11.69;Switzerland;Portugal;1;1;FIFA World Cup qualification;Berne;Switzerland;FALSE;1452;0;0;0
+22.04.70;Switzerland;Spain;0;1;Friendly;Lausanne;Switzerland;FALSE;1453;0;0;0
+03.05.70;Switzerland;France;2;1;Friendly;Basel;Switzerland;FALSE;1456;0;0;0
+17.10.70;Switzerland;Italy;1;1;Friendly;Berne;Switzerland;FALSE;1458;0;0;0
+15.11.70;Switzerland;Hungary;0;1;Friendly;Basel;Switzerland;FALSE;1459;0;0;0
+16.12.70;Greece;Switzerland;0;1;UEFA Euro qualification;Piraeus;Greece;FALSE;1460;0;0;0
+20.12.70;Malta;Switzerland;1;2;UEFA Euro qualification;G≈ºira;Malta;FALSE;1463;0;0;0
+21.04.71;Switzerland;Malta;5;0;UEFA Euro qualification;Lucerne;Switzerland;FALSE;1468;0;0;0
+05.05.71;Switzerland;Poland;2;4;Friendly;Lausanne;Switzerland;FALSE;1474;0;0;0
+12.05.71;Switzerland;Greece;1;0;UEFA Euro qualification;Berne;Switzerland;FALSE;1475;0;0;0
+26.09.71;Switzerland;Turkey;4;0;Friendly;Zurich;Switzerland;FALSE;1479;0;0;0
+13.10.71;Switzerland;England;2;3;UEFA Euro qualification;Basel;Switzerland;FALSE;1484;0;0;0
+10.11.71;England;Switzerland;1;1;UEFA Euro qualification;London;England;FALSE;1486;0;0;0
+26.04.72;Switzerland;Sweden;1;1;Friendly;Geneva;Switzerland;FALSE;1488;0;0;0
+10.05.72;Poland;Switzerland;0;0;Friendly;Pozna≈Ñ;Poland;FALSE;1488;0;0;0
+04.10.72;Denmark;Switzerland;1;1;Friendly;Copenhagen;Denmark;FALSE;1490;0;0;0
+21.10.72;Switzerland;Italy;0;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;1490;0;0;0
+15.11.72;Germany;Switzerland;5;1;Friendly;Dusseldorf;Germany;FALSE;1496;0;0;0
+08.04.73;Luxembourg;Switzerland;0;1;FIFA World Cup qualification;Luxembourg;Luxembourg;FALSE;1497;0;0;0
+09.05.73;Switzerland;Turkey;0;0;FIFA World Cup qualification;Basel;Switzerland;FALSE;1497;0;0;0
+22.06.73;Switzerland;Scotland;1;0;Friendly;Berne;Switzerland;FALSE;1498;0;0;0
+26.09.73;Switzerland;Luxembourg;1;0;FIFA World Cup qualification;Lucerne;Switzerland;FALSE;1499;0;0;0
+20.10.73;Italy;Switzerland;2;0;FIFA World Cup qualification;Rome;Italy;FALSE;1501;0;0;0
+18.11.73;Turkey;Switzerland;2;0;FIFA World Cup qualification;Izmir;Turkey;FALSE;1503;0;0;0
+01.05.74;Switzerland;Belgium;0;1;Friendly;Geneva;Switzerland;FALSE;1504;0;0;0
+09.06.74;Sweden;Switzerland;0;0;Friendly;Malm√∂;Sweden;FALSE;1504;0;0;0
+04.09.74;Switzerland;Germany;1;2;Friendly;Basel;Switzerland;FALSE;1507;0;0;0
+09.10.74;Netherlands;Switzerland;1;0;Friendly;Rotterdam;Netherlands;FALSE;1508;0;0;0
+13.11.74;Switzerland;Portugal;3;0;Friendly;Berne;Switzerland;FALSE;1511;0;0;0
+01.12.74;Turkey;Switzerland;2;1;UEFA Euro qualification;Izmir;Turkey;FALSE;1514;0;0;0
+04.12.74;Hungary;Switzerland;1;0;Friendly;Szolnok;Hungary;FALSE;1515;0;0;0
+30.04.75;Switzerland;Turkey;1;1;UEFA Euro qualification;Basel;Switzerland;FALSE;1517;0;0;0
+10.05.75;Republic of Ireland;Switzerland;2;1;UEFA Euro qualification;Dublin;Republic of Ireland;FALSE;1520;0;0;0
+21.05.75;Switzerland;Republic of Ireland;1;0;UEFA Euro qualification;Berne;Switzerland;FALSE;1521;0;0;0
+03.09.75;Switzerland;England;1;2;Friendly;Basel;Switzerland;FALSE;1524;0;0;0
+24.09.75;Czechoslovakia;Switzerland;1;1;Friendly;Brno;Czechoslovakia;FALSE;1526;0;0;0
+12.10.75;Switzerland;Russia;0;1;UEFA Euro qualification;Zurich;Switzerland;FALSE;1527;0;0;0
+12.11.75;Russia;Switzerland;4;1;UEFA Euro qualification;Kyiv;Soviet Union;FALSE;1532;0;0;0
+07.04.76;Scotland;Switzerland;1;0;Friendly;Glasgow;Scotland;FALSE;1533;0;0;0
+30.04.76;Switzerland;Hungary;0;1;Friendly;Lausanne;Switzerland;FALSE;1534;0;0;0
+11.05.76;Switzerland;Poland;2;1;Friendly;Basel;Switzerland;FALSE;1537;0;0;0
+19.05.76;Finland;Switzerland;1;0;Friendly;Kuopio;Finland;FALSE;1538;0;0;0
+17.08.76;Switzerland;Bulgaria;2;2;Friendly;Lucerne;Switzerland;FALSE;1542;0;0;0
+08.09.76;Norway;Switzerland;1;0;FIFA World Cup qualification;Oslo;Norway;FALSE;1543;0;0;0
+22.09.76;Austria;Switzerland;3;1;Friendly;Linz;Austria;FALSE;1547;0;0;0
+09.10.76;Switzerland;Sweden;1;2;FIFA World Cup qualification;Basel;Switzerland;FALSE;1550;0;0;0
+30.03.77;Portugal;Switzerland;1;0;Friendly;Funchal;Portugal;FALSE;1551;0;0;0
+23.04.77;Switzerland;France;0;4;Friendly;Geneva;Switzerland;FALSE;1555;0;0;0
+24.05.77;Switzerland;Czechoslovakia;1;0;Friendly;Basel;Switzerland;FALSE;1556;0;0;0
+08.06.77;Sweden;Switzerland;2;1;FIFA World Cup qualification;Solna;Sweden;FALSE;1559;0;0;0
+07.09.77;England;Switzerland;0;0;Friendly;London;England;FALSE;1559;0;0;0
+21.09.77;Switzerland;Spain;1;2;Friendly;Berne;Switzerland;FALSE;1562;0;0;0
+05.10.77;Switzerland;Finland;2;0;Friendly;Zurich;Switzerland;FALSE;1564;0;0;0
+30.10.77;Switzerland;Norway;1;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;1565;0;0;0
+16.11.77;Germany;Switzerland;4;1;Friendly;Stuttgart;Germany;FALSE;1570;0;0;0
+08.03.78;German DR;Switzerland;3;1;Friendly;Karl-Marx-Stadt;German DR;FALSE;1574;0;0;0
+04.04.78;Switzerland;Austria;0;1;Friendly;Basel;Switzerland;FALSE;1575;0;0;0
+06.09.78;Switzerland;United States;2;0;Friendly;Lucerne;Switzerland;FALSE;1577;0;0;0
+11.10.78;Switzerland;Netherlands;1;3;UEFA Euro qualification;Berne;Switzerland;FALSE;1581;0;0;0
+15.11.78;Poland;Switzerland;2;0;UEFA Euro qualification;Wroc≈Çaw;Poland;FALSE;1583;0;0;0
+28.03.79;Netherlands;Switzerland;3;0;UEFA Euro qualification;Eindhoven;Netherlands;FALSE;1586;0;0;0
+05.05.79;Switzerland;German DR;0;2;UEFA Euro qualification;St. Gallen;Switzerland;FALSE;1588;0;0;0
+22.05.79;Switzerland;Iceland;2;0;UEFA Euro qualification;Berne;Switzerland;FALSE;1590;0;0;0
+09.06.79;Iceland;Switzerland;1;2;UEFA Euro qualification;Reykjav√≠k;Iceland;FALSE;1593;0;0;0
+12.09.79;Switzerland;Poland;0;2;UEFA Euro qualification;Lausanne;Switzerland;FALSE;1595;0;0;0
+13.10.79;German DR;Switzerland;5;2;UEFA Euro qualification;Berlin;German DR;FALSE;1602;0;0;0
+17.11.79;Italy;Switzerland;2;0;Friendly;Udine;Italy;FALSE;1604;0;0;0
+26.03.80;Switzerland;Czechoslovakia;2;0;Friendly;Basel;Switzerland;FALSE;1606;0;0;0
+01.04.80;Switzerland;Greece;2;0;Friendly;Zurich;Switzerland;FALSE;1608;0;0;0
+30.04.80;Republic of Ireland;Switzerland;2;0;Friendly;Dublin;Republic of Ireland;FALSE;1610;0;0;0
+27.08.80;Switzerland;Denmark;1;1;Friendly;Lausanne;Switzerland;FALSE;1612;0;0;0
+10.09.80;Switzerland;Germany;2;3;Friendly;Berne;Switzerland;FALSE;1617;0;0;0
+29.10.80;Switzerland;Norway;1;2;FIFA World Cup qualification;Berne;Switzerland;FALSE;1620;0;0;0
+19.11.80;England;Switzerland;2;1;FIFA World Cup qualification;London;England;FALSE;1623;0;0;0
+16.12.80;Argentina;Switzerland;5;0;Friendly;C√≥rdoba;Argentina;FALSE;1628;0;0;0
+18.12.80;Uruguay;Switzerland;4;0;Friendly;Montevideo;Uruguay;FALSE;1632;0;0;0
+21.12.80;Brazil;Switzerland;2;0;Friendly;Cuiab√°;Brazil;FALSE;1634;0;0;0
+24.03.81;Czechoslovakia;Switzerland;0;1;Friendly;Bratislava;Czechoslovakia;FALSE;1635;0;0;0
+28.04.81;Switzerland;Hungary;2;2;FIFA World Cup qualification;Lucerne;Switzerland;FALSE;1639;0;0;0
+30.05.81;Switzerland;England;2;1;FIFA World Cup qualification;Basel;Switzerland;FALSE;1642;0;0;0
+17.06.81;Norway;Switzerland;1;1;FIFA World Cup qualification;Oslo;Norway;FALSE;1644;0;0;0
+01.09.81;Switzerland;Netherlands;2;1;Friendly;Zurich;Switzerland;FALSE;1647;0;0;0
+10.10.81;Romania;Switzerland;1;2;FIFA World Cup qualification;Bucharest;Romania;FALSE;1650;0;0;0
+14.10.81;Hungary;Switzerland;3;0;FIFA World Cup qualification;Budapest;Hungary;FALSE;1653;0;0;0
+11.11.81;Switzerland;Romania;0;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;1653;0;0;0
+09.03.82;Liechtenstein;Switzerland;0;1;Friendly;Balzers;Liechtenstein;FALSE;1654;0;0;0
+24.03.82;Switzerland;Portugal;2;1;Friendly;Lugano;Switzerland;FALSE;1657;0;0;0
+28.04.82;Spain;Switzerland;2;0;Friendly;Valencia;Spain;FALSE;1659;0;0;0
+19.05.82;Brazil;Switzerland;1;1;Friendly;Recife;Brazil;FALSE;1661;0;0;0
+28.05.82;Switzerland;Italy;1;1;Friendly;Geneva;Switzerland;FALSE;1663;0;0;0
+07.09.82;Switzerland;Bulgaria;3;2;Friendly;St. Gallen;Switzerland;FALSE;1668;0;0;0
+06.10.82;Belgium;Switzerland;3;0;UEFA Euro qualification;Brussels;Belgium;FALSE;1671;0;0;0
+27.10.82;Italy;Switzerland;0;1;Friendly;Rome;Italy;FALSE;1672;0;0;0
+17.11.82;Switzerland;Scotland;2;0;UEFA Euro qualification;Berne;Switzerland;FALSE;1674;0;0;0
+01.12.82;Greece;Switzerland;1;3;Friendly;Athens;Greece;FALSE;1678;0;0;0
+30.03.83;Scotland;Switzerland;2;2;UEFA Euro qualification;Glasgow;Scotland;FALSE;1682;0;0;0
+13.04.83;Switzerland;Russia;0;1;Friendly;Lausanne;Switzerland;FALSE;1683;0;0;0
+14.05.83;Switzerland;German DR;0;0;UEFA Euro qualification;Berne;Switzerland;FALSE;1683;0;0;0
+17.06.83;Switzerland;Brazil;1;2;Friendly;Basel;Switzerland;FALSE;1686;0;0;0
+07.09.83;Switzerland;Czechoslovakia;0;0;Friendly;Neuch√¢tel;Switzerland;FALSE;1686;0;0;0
+12.10.83;German DR;Switzerland;3;0;UEFA Euro qualification;Berlin;German DR;FALSE;1689;0;0;0
+09.11.83;Switzerland;Belgium;3;1;UEFA Euro qualification;Berne;Switzerland;FALSE;1695;0;0;0
+30.11.83;Algeria;Switzerland;1;2;Friendly;Algiers;Algeria;FALSE;1698;0;0;0
+04.12.83;Zimbabwe;Switzerland;3;2;Friendly;Harare;Zimbabwe;FALSE;1704;0;0;0
+06.12.83;Kenya;Switzerland;0;0;Friendly;Mombasa;Kenya;FALSE;1704;0;0;0
+27.03.84;Switzerland;Poland;1;1;Friendly;Zurich;Switzerland;FALSE;1706;0;0;0
+02.05.84;Switzerland;Sweden;0;0;Friendly;Berne;Switzerland;FALSE;1706;0;0;0
+26.05.84;Switzerland;Spain;0;4;Friendly;Geneva;Switzerland;FALSE;1711;0;0;0
+22.08.84;Hungary;Switzerland;3;0;Friendly;Budapest;Hungary;FALSE;1714;0;0;0
+01.09.84;Switzerland;Argentina;0;2;Friendly;Berne;Switzerland;FALSE;1716;0;0;0
+12.09.84;Norway;Switzerland;0;1;FIFA World Cup qualification;Oslo;Norway;FALSE;1717;0;0;0
+17.10.84;Switzerland;Denmark;1;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;1718;0;0;0
+03.11.84;Switzerland;Italy;1;1;Friendly;Lausanne;Switzerland;FALSE;1720;0;0;0
+01.02.85;Colombia;Switzerland;2;2;Friendly;Bogot√°;Colombia;FALSE;1724;0;0;0
+05.02.85;Bulgaria;Switzerland;1;0;Friendly;Quer√©taro;Mexico;TRUE;1725;0;0;0
+06.02.85;Mexico;Switzerland;1;2;Friendly;Quer√©taro;Mexico;FALSE;1728;0;0;0
+08.02.85;United States;Switzerland;1;1;Friendly;Tampa;United States;FALSE;1730;0;0;0
+27.03.85;Switzerland;Czechoslovakia;2;0;Friendly;Sion;Switzerland;FALSE;1732;0;0;0
+17.04.85;Switzerland;Russia;2;2;FIFA World Cup qualification;Berne;Switzerland;FALSE;1736;0;0;0
+02.05.85;Russia;Switzerland;4;0;FIFA World Cup qualification;Moscow;Soviet Union;TRUE;1740;0;0;0
+02.06.85;Republic of Ireland;Switzerland;3;0;FIFA World Cup qualification;Dublin;Republic of Ireland;FALSE;1743;0;0;0
+28.08.85;Switzerland;Turkey;0;0;Friendly;St. Gallen;Switzerland;FALSE;1743;0;0;0
+11.09.85;Switzerland;Republic of Ireland;0;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;1743;0;0;0
+09.10.85;Denmark;Switzerland;0;0;FIFA World Cup qualification;Copenhagen;Denmark;FALSE;1743;0;0;0
+13.11.85;Switzerland;Norway;1;1;FIFA World Cup qualification;Lucerne;Switzerland;FALSE;1745;0;0;0
+12.03.86;Turkey;Switzerland;1;0;Friendly;Adana;Turkey;FALSE;1746;0;0;0
+09.04.86;Switzerland;Germany;0;1;Friendly;Basel;Switzerland;FALSE;1747;0;0;0
+06.05.86;Switzerland;Algeria;2;0;Friendly;Geneva;Switzerland;FALSE;1749;0;0;0
+19.08.86;Switzerland;France;2;0;Friendly;Lausanne;Switzerland;FALSE;1751;0;0;0
+27.08.86;Austria;Switzerland;1;1;Friendly;Innsbruck;Austria;FALSE;1753;0;0;0
+24.09.86;Sweden;Switzerland;2;0;UEFA Euro qualification;Solna;Sweden;FALSE;1755;0;0;0
+29.10.86;Switzerland;Portugal;1;1;UEFA Euro qualification;Berne;Switzerland;FALSE;1757;0;0;0
+15.11.86;Italy;Switzerland;3;2;UEFA Euro qualification;Milan;Italy;FALSE;1762;0;0;0
+25.03.87;Switzerland;Czechoslovakia;1;2;Friendly;Bellinzona;Switzerland;FALSE;1765;0;0;0
+15.04.87;Switzerland;Malta;4;1;UEFA Euro qualification;Neuch√¢tel;Switzerland;FALSE;1770;0;0;0
+19.05.87;Switzerland;Israel;1;0;Friendly;Aarau;Switzerland;FALSE;1771;0;0;0
+17.06.87;Switzerland;Sweden;1;1;UEFA Euro qualification;Lausanne;Switzerland;FALSE;1777;0;0;0
+18.08.87;Switzerland;Austria;2;2;Friendly;St. Gallen;Switzerland;FALSE;1781;0;0;0
+17.10.87;Switzerland;Italy;0;0;UEFA Euro qualification;Berne;Switzerland;FALSE;1781;0;0;0
+11.11.87;Portugal;Switzerland;0;0;UEFA Euro qualification;Porto;Portugal;FALSE;1781;0;0;0
+15.11.87;Malta;Switzerland;1;1;UEFA Euro qualification;Attard;Malta;FALSE;1783;0;0;0
+16.12.87;Israel;Switzerland;0;2;Friendly;Ramat-Gan;Israel;FALSE;1785;0;0;0
+02.02.88;France;Switzerland;2;1;Tournoi de France;Toulouse;France;FALSE;1788;0;0;0
+05.02.88;Austria;Switzerland;1;2;Tournoi de France;Monaco;Monaco;TRUE;1791;0;0;0
+27.04.88;Germany;Switzerland;1;0;Friendly;Kaiserslautern;Germany;FALSE;1792;0;0;0
+28.05.88;Switzerland;England;0;1;Friendly;Basel;Switzerland;FALSE;1793;0;0;0
+05.06.88;Switzerland;Spain;1;1;Friendly;Basel;Switzerland;FALSE;1795;0;0;0
+21.09.88;Luxembourg;Switzerland;1;4;FIFA World Cup qualification;Luxembourg;Luxembourg;FALSE;1802;0;0;0
+19.10.88;Belgium;Switzerland;1;0;FIFA World Cup qualification;Brussels;Belgium;FALSE;1803;0;0;0
+14.12.88;Egypt;Switzerland;1;3;Friendly;Cairo;Egypt;FALSE;1807;0;0;0
+04.04.89;Hungary;Switzerland;3;0;Friendly;Budapest;Hungary;FALSE;1810;0;0;0
+26.04.89;Portugal;Switzerland;3;1;FIFA World Cup qualification;Lisbon;Portugal;FALSE;1814;0;0;0
+07.06.89;Switzerland;Czechoslovakia;0;1;FIFA World Cup qualification;Berne;Switzerland;FALSE;1815;0;0;0
+21.06.89;Switzerland;Brazil;1;0;Friendly;Basel;Switzerland;FALSE;1816;0;0;0
+20.09.89;Switzerland;Portugal;1;2;FIFA World Cup qualification;Neuch√¢tel;Switzerland;FALSE;1819;0;0;0
+11.10.89;Switzerland;Belgium;2;2;FIFA World Cup qualification;Basel;Switzerland;FALSE;1823;0;0;0
+25.10.89;Czechoslovakia;Switzerland;3;0;FIFA World Cup qualification;Prague;Czechoslovakia;FALSE;1826;0;0;0
+15.11.89;Switzerland;Luxembourg;2;1;FIFA World Cup qualification;St. Gallen;Switzerland;FALSE;1829;0;0;0
+13.12.89;Spain;Switzerland;2;1;Friendly;Santa Cruz de Tenerife;Spain;FALSE;1832;0;0;0
+31.03.90;Switzerland;Italy;0;1;Friendly;Basel;Switzerland;FALSE;1833;0;0;0
+03.04.90;Switzerland;Romania;2;1;Friendly;Lucerne;Switzerland;FALSE;1836;0;0;0
+08.05.90;Switzerland;Argentina;1;1;Friendly;Berne;Switzerland;FALSE;1838;0;0;0
+02.06.90;Switzerland;United States;2;1;Friendly;St. Gallen;Switzerland;FALSE;1841;0;0;0
+21.08.90;Austria;Switzerland;1;3;Friendly;Vienna;Austria;FALSE;1845;0;0;0
+12.09.90;Switzerland;Bulgaria;2;0;UEFA Euro qualification;Geneva;Switzerland;FALSE;1847;0;0;0
+17.10.90;Scotland;Switzerland;2;1;UEFA Euro qualification;Glasgow;Scotland;FALSE;1850;0;0;0
+14.11.90;San Marino;Switzerland;0;4;UEFA Euro qualification;Serravalle;San Marino;FALSE;1854;0;0;0
+19.12.90;Germany;Switzerland;4;0;Friendly;Stuttgart;Germany;FALSE;1858;0;0;0
+01.02.91;United States;Switzerland;0;1;Friendly;Miami;United States;FALSE;1859;0;0;0
+03.02.91;Colombia;Switzerland;2;3;Friendly;Miami;United States;TRUE;1864;0;0;0
+12.03.91;Liechtenstein;Switzerland;0;6;Friendly;Balzers;Liechtenstein;FALSE;1870;0;0;0
+03.04.91;Switzerland;Romania;0;0;UEFA Euro qualification;Neuch√¢tel;Switzerland;FALSE;1870;0;0;0
+01.05.91;Bulgaria;Switzerland;2;3;UEFA Euro qualification;Sofia;Bulgaria;FALSE;1875;0;0;0
+05.06.91;Switzerland;San Marino;7;0;UEFA Euro qualification;St. Gallen;Switzerland;FALSE;1882;0;0;0
+21.08.91;Czechoslovakia;Switzerland;1;1;Friendly;Prague;Czechoslovakia;FALSE;1884;0;0;0
+11.09.91;Switzerland;Scotland;2;2;UEFA Euro qualification;Berne;Switzerland;FALSE;1888;0;0;0
+09.10.91;Switzerland;Sweden;3;1;Friendly;Lucerne;Switzerland;FALSE;1892;0;0;0
+13.11.91;Romania;Switzerland;1;0;UEFA Euro qualification;Bucharest;Romania;FALSE;1893;0;0;0
+25.03.92;Republic of Ireland;Switzerland;2;1;Friendly;Dublin;Republic of Ireland;FALSE;1896;0;0;0
+28.04.92;Switzerland;Bulgaria;0;2;Friendly;Berne;Switzerland;FALSE;1898;0;0;0
+27.05.92;Switzerland;France;2;1;Friendly;Lausanne;Switzerland;FALSE;1901;0;0;0
+16.08.92;Estonia;Switzerland;0;6;FIFA World Cup qualification;Tallinn;Estonia;FALSE;1907;0;0;0
+09.09.92;Switzerland;Scotland;3;1;FIFA World Cup qualification;Berne;Switzerland;FALSE;1911;0;0;0
+14.10.92;Italy;Switzerland;2;2;FIFA World Cup qualification;Cagliari;Italy;FALSE;1915;0;0;0
+18.11.92;Switzerland;Malta;3;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;1918;0;0;0
+17.03.93;Tunisia;Switzerland;0;1;Friendly;Tunis;Tunisia;FALSE;1919;0;0;0
+31.03.93;Switzerland;Portugal;1;1;FIFA World Cup qualification;Berne;Switzerland;FALSE;1921;0;0;0
+17.04.93;Malta;Switzerland;0;2;FIFA World Cup qualification;Attard;Malta;FALSE;1923;0;0;0
+01.05.93;Switzerland;Italy;1;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;1924;0;0;0
+11.08.93;Sweden;Switzerland;1;2;Friendly;Bor√•s;Sweden;FALSE;1927;0;0;0
+08.09.93;Scotland;Switzerland;1;1;FIFA World Cup qualification;Aberdeen;Scotland;FALSE;1929;0;0;0
+13.10.93;Portugal;Switzerland;1;0;FIFA World Cup qualification;Porto;Portugal;FALSE;1930;0;0;0
+17.11.93;Switzerland;Estonia;4;0;FIFA World Cup qualification;Zurich;Switzerland;FALSE;1934;0;0;0
+22.01.94;United States;Switzerland;1;1;Friendly;Fullerton;United States;FALSE;1936;0;0;0
+26.01.94;Mexico;Switzerland;1;5;Friendly;Oakland;United States;TRUE;1942;0;0;0
+09.03.94;Hungary;Switzerland;1;2;Friendly;Budapest;Hungary;FALSE;1945;0;0;0
+20.04.94;Switzerland;Czech Republic;3;0;Friendly;Zurich;Switzerland;FALSE;1948;0;0;0
+27.05.94;Switzerland;Liechtenstein;2;0;Friendly;Basel;Switzerland;FALSE;1950;0;0;0
+03.06.94;Italy;Switzerland;1;0;Friendly;Rome;Italy;FALSE;1951;0;0;0
+11.06.94;Bolivia;Switzerland;0;0;Friendly;Montr√©al;Canada;TRUE;1951;0;0;0
+18.06.94;United States;Switzerland;1;1;FIFA World Cup;Pontiac;United States;FALSE;1953;0;0;0
+22.06.94;Romania;Switzerland;1;4;FIFA World Cup;Pontiac;United States;TRUE;1958;0;0;0
+26.06.94;Switzerland;Colombia;0;2;FIFA World Cup;Palo Alto;United States;TRUE;1960;0;0;0
+02.07.94;Spain;Switzerland;3;0;FIFA World Cup;Washington;United States;TRUE;1963;0;0;0
+06.09.94;Switzerland;United Arab Emirates;1;0;Friendly;Sion;Switzerland;FALSE;1964;0;0;0
+12.10.94;Switzerland;Sweden;4;2;UEFA Euro qualification;Berne;Switzerland;FALSE;1970;0;0;0
+16.11.94;Switzerland;Iceland;1;0;UEFA Euro qualification;Lausanne;Switzerland;FALSE;1971;0;0;0
+14.12.94;Turkey;Switzerland;1;2;UEFA Euro qualification;Istanbul;Turkey;FALSE;1974;0;0;0
+08.03.95;Greece;Switzerland;1;1;Friendly;Athens;Greece;FALSE;1976;0;0;0
+29.03.95;Hungary;Switzerland;2;2;UEFA Euro qualification;Budapest;Hungary;FALSE;1980;0;0;0
+26.04.95;Switzerland;Turkey;1;2;UEFA Euro qualification;Berne;Switzerland;FALSE;1983;0;0;0
+19.06.95;Switzerland;Italy;0;1;Friendly;Lausanne;Switzerland;FALSE;1984;0;0;0
+23.06.95;Switzerland;Germany;1;2;Friendly;Berne;Switzerland;FALSE;1989;0;0;0
+16.08.95;Iceland;Switzerland;0;2;UEFA Euro qualification;Reykjav√≠k;Iceland;FALSE;1991;0;0;0
+06.09.95;Sweden;Switzerland;0;0;UEFA Euro qualification;Gothenburg;Sweden;FALSE;1991;0;0;0
+11.10.95;Switzerland;Hungary;3;0;UEFA Euro qualification;Zurich;Switzerland;FALSE;1994;0;0;0
+15.11.95;England;Switzerland;3;1;Friendly;London;England;FALSE;1998;0;0;0
+13.03.96;Luxembourg;Switzerland;1;1;Friendly;Luxembourg;Luxembourg;FALSE;2000;0;0;0
+27.03.96;Austria;Switzerland;1;0;Friendly;Vienna;Austria;FALSE;2001;0;0;0
+24.04.96;Switzerland;Wales;2;0;Friendly;Lugano;Switzerland;FALSE;2003;0;0;0
+01.06.96;Switzerland;Czech Republic;1;2;Friendly;Basel;Switzerland;FALSE;2006;0;0;0
+08.06.96;England;Switzerland;1;1;UEFA Euro;London;England;FALSE;2008;0;0;0
+13.06.96;Switzerland;Netherlands;0;2;UEFA Euro;Birmingham;England;TRUE;2010;0;0;0
+18.06.96;Scotland;Switzerland;1;0;UEFA Euro;Birmingham;England;TRUE;2011;0;0;0
+31.08.96;Azerbaijan;Switzerland;1;0;FIFA World Cup qualification;Baku;Azerbaijan;FALSE;2012;0;0;0
+06.10.96;Finland;Switzerland;2;3;FIFA World Cup qualification;Helsinki;Finland;FALSE;2017;0;0;0
+10.11.96;Switzerland;Norway;0;1;FIFA World Cup qualification;Berne;Switzerland;FALSE;2018;0;0;0
+10.02.97;Russia;Switzerland;2;1;Lunar New Year Cup;So Kon Po;Hong Kong;TRUE;2021;0;0;0
+02.04.97;Switzerland;Latvia;1;0;Friendly;Lucerne;Switzerland;FALSE;2022;0;0;0
+30.04.97;Switzerland;Hungary;1;0;FIFA World Cup qualification;Zurich;Switzerland;FALSE;2023;0;0;0
+06.08.97;Slovakia;Switzerland;1;0;Friendly;Bratislava;Slovakia;FALSE;2024;0;0;0
+20.08.97;Hungary;Switzerland;1;1;FIFA World Cup qualification;Budapest;Hungary;FALSE;2026;0;0;0
+06.09.97;Switzerland;Finland;1;2;FIFA World Cup qualification;Lausanne;Switzerland;FALSE;2029;0;0;0
+10.09.97;Norway;Switzerland;5;0;FIFA World Cup qualification;Oslo;Norway;FALSE;2035;0;0;0
+11.10.97;Switzerland;Azerbaijan;5;0;FIFA World Cup qualification;Zurich;Switzerland;FALSE;2040;0;0;0
+25.03.98;Switzerland;England;1;1;Friendly;Berne;Switzerland;FALSE;2042;0;0;0
+22.04.98;Northern Ireland;Switzerland;1;0;Friendly;Belfast;Northern Ireland;FALSE;2043;0;0;0
+06.06.98;Switzerland;Serbia;1;1;Friendly;Basel;Switzerland;FALSE;2049;0;0;0
+02.09.98;Serbia;Switzerland;1;1;Friendly;Ni≈°;Yugoslavia;FALSE;2051;0;0;0
+10.10.98;Italy;Switzerland;2;0;UEFA Euro qualification;Udine;Italy;FALSE;2053;0;0;0
+14.10.98;Switzerland;Denmark;1;1;UEFA Euro qualification;Zurich;Switzerland;FALSE;2055;0;0;0
+18.11.98;Hungary;Switzerland;2;0;Friendly;Budapest;Hungary;FALSE;2057;0;0;0
+06.02.99;Slovenia;Switzerland;0;2;Friendly;Muscat;Oman;TRUE;2059;0;0;0
+10.02.99;Oman;Switzerland;1;2;Friendly;Muscat;Oman;FALSE;2062;0;0;0
+10.03.99;Switzerland;Austria;2;4;Friendly;St. Gallen;Switzerland;FALSE;2068;0;0;0
+27.03.99;Belarus;Switzerland;0;1;UEFA Euro qualification;Minsk;Belarus;FALSE;2069;0;0;0
+31.03.99;Switzerland;Wales;2;0;UEFA Euro qualification;Zurich;Switzerland;FALSE;2071;0;0;0
+28.04.99;Greece;Switzerland;1;1;Friendly;Athens;Greece;FALSE;2073;0;0;0
+09.06.99;Switzerland;Italy;0;0;UEFA Euro qualification;Lausanne;Switzerland;FALSE;2073;0;0;0
+18.08.99;Czech Republic;Switzerland;3;0;Friendly;Drnovice;Czech Republic;FALSE;2076;0;0;0
+04.09.99;Denmark;Switzerland;2;1;UEFA Euro qualification;Copenhagen;Denmark;FALSE;2079;0;0;0
+08.09.99;Switzerland;Belarus;2;0;UEFA Euro qualification;Lausanne;Switzerland;FALSE;2081;0;0;0
+09.10.99;Wales;Switzerland;0;2;UEFA Euro qualification;Wrexham;Wales;FALSE;2083;0;0;0
+19.02.00;Oman;Switzerland;1;4;Friendly;Muscat;Oman;FALSE;2088;0;0;0
+23.02.00;United Arab Emirates;Switzerland;1;0;Friendly;Muscat;Oman;TRUE;2089;0;0;0
+29.03.00;Switzerland;Norway;2;2;Friendly;Lugano;Switzerland;FALSE;2093;0;0;0
+26.04.00;Germany;Switzerland;1;1;Friendly;Kaiserslautern;Germany;FALSE;2095;0;0;0
+16.08.00;Switzerland;Greece;2;2;Friendly;St. Gallen;Switzerland;FALSE;2103;0;0;0
+02.09.00;Switzerland;Russia;0;1;FIFA World Cup qualification;Zurich;Switzerland;FALSE;2104;0;0;0
+07.10.00;Switzerland;Faroe Islands;5;1;FIFA World Cup qualification;Zurich;Switzerland;FALSE;2110;0;0;0
+11.10.00;Slovenia;Switzerland;2;2;FIFA World Cup qualification;Ljubljana;Slovenia;FALSE;2114;0;0;0
+15.11.00;Tunisia;Switzerland;1;1;Friendly;Tunis;Tunisia;FALSE;2116;0;0;0
+28.02.01;Switzerland;Poland;0;4;Friendly;Larnaca;Cyprus;TRUE;2120;0;0;0
+24.03.01;Serbia;Switzerland;1;1;FIFA World Cup qualification;Belgrade;Yugoslavia;TRUE;2122;0;0;0
+28.03.01;Switzerland;Luxembourg;5;0;FIFA World Cup qualification;Zurich;Switzerland;FALSE;2127;0;0;0
+25.04.01;Switzerland;Sweden;0;2;Friendly;Geneva;Switzerland;FALSE;2129;0;0;0
+02.06.01;Faroe Islands;Switzerland;0;1;FIFA World Cup qualification;Toftir;Faroe Islands;FALSE;2130;0;0;0
+06.06.01;Switzerland;Slovenia;0;1;FIFA World Cup qualification;Basel;Switzerland;FALSE;2131;0;0;0
+15.08.01;Austria;Switzerland;1;2;Friendly;Vienna;Austria;FALSE;2134;0;0;0
+01.09.01;Switzerland;Serbia;1;2;FIFA World Cup qualification;Basel;Switzerland;FALSE;2137;0;0;0
+05.09.01;Luxembourg;Switzerland;0;3;FIFA World Cup qualification;Luxembourg;Luxembourg;FALSE;2140;0;0;0
+06.10.01;Russia;Switzerland;4;0;FIFA World Cup qualification;Moscow;Russia;FALSE;2144;0;0;0
+12.02.02;Cyprus;Switzerland;1;1;Cyprus International Tournament;Nicosia;Cyprus;FALSE;2146;0;0;0
+13.02.02;Switzerland;Hungary;2;1;Cyprus International Tournament;Limassol;Cyprus;TRUE;2149;0;0;0
+27.03.02;Sweden;Switzerland;1;1;Friendly;Malm√∂;Sweden;FALSE;2155;0;0;0
+15.05.02;Switzerland;Canada;1;3;Friendly;St. Gallen;Switzerland;FALSE;2159;0;0;0
+21.08.02;Switzerland;Austria;3;2;Friendly;Basel;Switzerland;FALSE;2164;0;0;0
+08.09.02;Switzerland;Georgia;4;1;UEFA Euro qualification;Basel;Switzerland;FALSE;2169;0;0;0
+12.10.02;Albania;Switzerland;1;1;UEFA Euro qualification;Tirana;Albania;FALSE;2171;0;0;0
+16.10.02;Republic of Ireland;Switzerland;1;2;UEFA Euro qualification;Dublin;Republic of Ireland;FALSE;2174;0;0;0
+12.02.03;Slovenia;Switzerland;1;5;Friendly;Nova Gorica;Slovenia;FALSE;2180;0;0;0
+02.04.03;Georgia;Switzerland;0;0;UEFA Euro qualification;Tbilisi;Georgia;FALSE;2180;0;0;0
+30.04.03;Switzerland;Italy;1;2;Friendly;Geneva;Switzerland;FALSE;2184;0;0;0
+07.06.03;Switzerland;Russia;2;2;UEFA Euro qualification;Basel;Switzerland;FALSE;2188;0;0;0
+11.06.03;Switzerland;Albania;3;2;UEFA Euro qualification;Geneva;Switzerland;FALSE;2193;0;0;0
+20.08.03;Switzerland;France;0;2;Friendly;Geneva;Switzerland;FALSE;2195;0;0;0
+10.09.03;Russia;Switzerland;4;1;UEFA Euro qualification;Moscow;Russia;FALSE;2200;0;0;0
+11.10.03;Switzerland;Republic of Ireland;2;0;UEFA Euro qualification;Basel;Switzerland;FALSE;2202;0;0;0
+18.02.04;Morocco;Switzerland;2;1;Friendly;Rabat;Morocco;FALSE;2205;0;0;0
+31.03.04;Greece;Switzerland;1;0;Friendly;Heraklion;Greece;FALSE;2206;0;0;0
+28.04.04;Switzerland;Slovenia;2;1;Friendly;Geneva;Switzerland;FALSE;2209;0;0;0
+02.06.04;Switzerland;Germany;0;2;Friendly;Basel;Switzerland;FALSE;2214;0;0;0
+06.06.04;Switzerland;Liechtenstein;1;0;Friendly;Zurich;Switzerland;FALSE;2215;0;0;0
+13.06.04;Switzerland;Croatia;0;0;UEFA Euro;Leiria;Portugal;TRUE;2215;0;0;0
+17.06.04;England;Switzerland;3;0;UEFA Euro;Coimbra;Portugal;TRUE;2218;0;0;0
+21.06.04;Switzerland;France;1;3;UEFA Euro;Coimbra;Portugal;TRUE;2222;0;0;0
+18.08.04;Switzerland;Northern Ireland;0;0;Friendly;Zurich;Switzerland;FALSE;2222;0;0;0
+04.09.04;Switzerland;Faroe Islands;6;0;FIFA World Cup qualification;Basel;Switzerland;FALSE;2228;0;0;0
+08.09.04;Switzerland;Republic of Ireland;1;1;FIFA World Cup qualification;Basel;Switzerland;FALSE;2230;0;0;0
+09.10.04;Israel;Switzerland;2;2;FIFA World Cup qualification;Ramat-Gan;Israel;FALSE;2234;0;0;0
+09.02.05;United Arab Emirates;Switzerland;1;2;Friendly;Dubai;United Arab Emirates;FALSE;2237;0;0;0
+26.03.05;France;Switzerland;0;0;FIFA World Cup qualification;Saint-Denis;France;FALSE;2237;0;0;0
+30.03.05;Switzerland;Cyprus;1;0;FIFA World Cup qualification;Zurich;Switzerland;FALSE;2238;0;0;0
+04.06.05;Faroe Islands;Switzerland;1;3;FIFA World Cup qualification;Toftir;Faroe Islands;FALSE;2242;0;0;0
+17.08.05;Norway;Switzerland;0;2;Friendly;Oslo;Norway;FALSE;2246;0;0;0
+03.09.05;Switzerland;Israel;1;1;FIFA World Cup qualification;Basel;Switzerland;FALSE;2248;0;0;0
+07.09.05;Cyprus;Switzerland;1;3;FIFA World Cup qualification;Nicosia;Cyprus;FALSE;2252;0;0;0
+08.10.05;Switzerland;France;1;1;FIFA World Cup qualification;Berne;Switzerland;FALSE;2254;0;0;0
+12.10.05;Republic of Ireland;Switzerland;0;0;FIFA World Cup qualification;Dublin;Republic of Ireland;FALSE;2254;0;0;0
+12.11.05;Switzerland;Turkey;2;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;2261;0;0;0
+16.11.05;Turkey;Switzerland;4;2;FIFA World Cup qualification;Istanbul;Turkey;FALSE;2269;0;0;0
+01.03.06;Scotland;Switzerland;1;3;Friendly;Glasgow;Scotland;FALSE;2278;0;0;0
+31.05.06;Switzerland;Italy;1;1;Friendly;Geneva;Switzerland;FALSE;2282;0;0;0
+03.06.06;Switzerland;China PR;4;1;Friendly;Zurich;Switzerland;FALSE;2287;0;0;0
+13.06.06;France;Switzerland;0;0;FIFA World Cup;Stuttgart;Germany;TRUE;2297;0;0;0
+19.06.06;Togo;Switzerland;0;2;FIFA World Cup;Dortmund;Germany;TRUE;2299;0;0;0
+23.06.06;Switzerland;South Korea;2;0;FIFA World Cup;Hanover;Germany;TRUE;2301;0;0;0
+26.06.06;Switzerland;Ukraine;0;0;FIFA World Cup;Cologne;Germany;TRUE;2301;0;0;0
+16.08.06;Liechtenstein;Switzerland;0;3;Friendly;Vaduz;Liechtenstein;FALSE;2304;0;0;0
+02.09.06;Switzerland;Venezuela;1;0;Friendly;Basel;Switzerland;FALSE;2309;0;0;0
+06.09.06;Switzerland;Costa Rica;2;0;Friendly;Geneva;Switzerland;FALSE;2312;0;0;0
+11.10.06;Austria;Switzerland;2;1;Friendly;Innsbruck;Austria;FALSE;2315;0;0;0
+15.11.06;Switzerland;Brazil;1;2;Friendly;Basel;Switzerland;FALSE;2318;0;0;0
+07.02.07;Germany;Switzerland;3;1;Friendly;Dusseldorf;Germany;FALSE;2322;0;0;0
+22.03.07;Jamaica;Switzerland;0;2;Friendly;Fort Lauderdale;United States;TRUE;2324;0;0;0
+25.03.07;Colombia;Switzerland;3;1;Friendly;Miami;United States;TRUE;2328;0;0;0
+02.06.07;Switzerland;Argentina;1;1;Friendly;Basel;Switzerland;FALSE;2330;0;0;0
+22.08.07;Switzerland;Netherlands;2;1;Friendly;Geneva;Switzerland;FALSE;2333;0;0;0
+07.09.07;Switzerland;Chile;2;1;Friendly;Vienna;Austria;TRUE;2336;0;0;0
+11.09.07;Switzerland;Japan;3;4;Friendly;Klagenfurt;Austria;TRUE;2343;0;0;0
+13.10.07;Switzerland;Austria;3;1;Friendly;Zurich;Switzerland;FALSE;2347;0;0;0
+17.10.07;Switzerland;United States;0;1;Friendly;Basel;Switzerland;FALSE;2348;0;0;0
+20.11.07;Switzerland;Nigeria;0;1;Friendly;Zurich;Switzerland;FALSE;2349;0;0;0
+06.02.08;England;Switzerland;2;1;Friendly;London;England;FALSE;2352;0;0;0
+26.03.08;Switzerland;Germany;0;4;Friendly;Basel;Switzerland;FALSE;2360;0;0;0
+24.05.08;Switzerland;Slovakia;2;0;Friendly;Lugano;Switzerland;FALSE;2362;0;0;0
+30.05.08;Switzerland;Liechtenstein;3;0;Friendly;St. Gallen;Switzerland;FALSE;2365;0;0;0
+07.06.08;Switzerland;Czech Republic;0;1;UEFA Euro;Basel;Switzerland;FALSE;2368;0;0;0
+11.06.08;Switzerland;Turkey;1;2;UEFA Euro;Basel;Switzerland;FALSE;2378;0;0;0
+15.06.08;Switzerland;Portugal;2;0;UEFA Euro;Basel;Switzerland;FALSE;2387;0;0;0
+20.08.08;Switzerland;Cyprus;4;1;Friendly;Geneva;Switzerland;FALSE;2417;0;0;0
+06.09.08;Israel;Switzerland;2;2;FIFA World Cup qualification;Ramat-Gan;Israel;FALSE;2421;0;0;0
+10.09.08;Switzerland;Luxembourg;1;2;FIFA World Cup qualification;Zurich;Switzerland;FALSE;2424;0;0;0
+11.10.08;Switzerland;Latvia;2;1;FIFA World Cup qualification;St. Gallen;Switzerland;FALSE;2427;0;0;0
+15.10.08;Greece;Switzerland;1;2;FIFA World Cup qualification;Athens;Greece;FALSE;2430;0;0;0
+19.11.08;Switzerland;Finland;1;0;Friendly;St. Gallen;Switzerland;FALSE;2431;0;0;0
+11.02.09;Switzerland;Bulgaria;1;1;Friendly;Geneva;Switzerland;FALSE;2433;0;0;0
+28.03.09;Moldova;Switzerland;0;2;FIFA World Cup qualification;Chi»ôinƒÉu;Moldova;FALSE;2435;0;0;0
+01.04.09;Switzerland;Moldova;2;0;FIFA World Cup qualification;Geneva;Switzerland;FALSE;2439;0;0;0
+12.08.09;Switzerland;Italy;0;0;Friendly;Basel;Switzerland;FALSE;2439;0;0;0
+05.09.09;Switzerland;Greece;2;0;FIFA World Cup qualification;Basel;Switzerland;FALSE;2441;0;0;0
+09.09.09;Latvia;Switzerland;2;2;FIFA World Cup qualification;Riga;Latvia;FALSE;2445;0;0;0
+10.10.09;Luxembourg;Switzerland;0;3;FIFA World Cup qualification;Luxembourg;Luxembourg;FALSE;2448;0;0;0
+14.10.09;Switzerland;Israel;0;0;FIFA World Cup qualification;Basel;Switzerland;FALSE;2448;0;0;0
+14.11.09;Switzerland;Norway;0;1;Friendly;Geneva;Switzerland;FALSE;2449;0;0;0
+03.03.10;Switzerland;Uruguay;1;3;Friendly;St. Gallen;Switzerland;FALSE;2453;0;0;0
+01.06.10;Switzerland;Costa Rica;0;1;Friendly;Sion;Switzerland;FALSE;2455;0;0;0
+05.06.10;Switzerland;Italy;1;1;Friendly;Geneva;Switzerland;FALSE;2461;0;0;0
+16.06.10;Spain;Switzerland;0;1;FIFA World Cup;Durban;South Africa;TRUE;2462;0;0;0
+21.06.10;Chile;Switzerland;1;0;FIFA World Cup;Port Elizabeth;South Africa;TRUE;2463;0;0;0
+25.06.10;Switzerland;Honduras;0;0;FIFA World Cup;Bloemfontein;South Africa;TRUE;2463;0;0;0
+11.08.10;Austria;Switzerland;0;1;Friendly;Klagenfurt;Austria;FALSE;2464;0;0;0
+03.09.10;Switzerland;Australia;0;0;Friendly;St. Gallen;Switzerland;FALSE;2464;0;0;0
+07.09.10;Switzerland;England;1;3;UEFA Euro qualification;Basel;Switzerland;FALSE;2468;0;0;0
+08.10.10;Montenegro;Switzerland;1;0;UEFA Euro qualification;Podgorica;Montenegro;FALSE;2469;0;0;0
+12.10.10;Switzerland;Wales;4;1;UEFA Euro qualification;Basel;Switzerland;FALSE;2474;0;0;0
+17.11.10;Switzerland;Ukraine;2;2;Friendly;Geneva;Switzerland;FALSE;2478;0;0;0
+09.02.11;Malta;Switzerland;0;0;Friendly;Attard;Malta;FALSE;2481;0;0;0
+26.03.11;Bulgaria;Switzerland;0;0;UEFA Euro qualification;Sofia;Bulgaria;FALSE;2481;0;0;0
+04.06.11;England;Switzerland;2;2;UEFA Euro qualification;London;England;FALSE;2485;0;0;0
+10.08.11;Liechtenstein;Switzerland;1;2;Friendly;Vaduz;Liechtenstein;FALSE;2495;0;0;0
+06.09.11;Switzerland;Bulgaria;3;1;UEFA Euro qualification;Basel;Switzerland;FALSE;2504;0;0;0
+07.10.11;Wales;Switzerland;2;0;UEFA Euro qualification;Swansea;Wales;FALSE;2506;0;0;0
+11.10.11;Switzerland;Montenegro;2;0;UEFA Euro qualification;Basel;Switzerland;FALSE;2508;0;0;0
+11.11.11;Netherlands;Switzerland;0;0;Friendly;Amsterdam;Netherlands;FALSE;2508;0;0;0
+15.11.11;Luxembourg;Switzerland;0;1;Friendly;Luxembourg;Luxembourg;FALSE;2509;0;0;0
+29.02.12;Switzerland;Argentina;1;3;Friendly;Berne;Switzerland;FALSE;2516;0;0;0
+26.05.12;Switzerland;Germany;5;3;Friendly;Basel;Switzerland;FALSE;2526;0;0;0
+30.05.12;Switzerland;Romania;0;1;Friendly;Lucerne;Switzerland;FALSE;2532;0;0;0
+15.08.12;Croatia;Switzerland;2;4;Friendly;Split;Croatia;FALSE;2541;0;0;0
+07.09.12;Slovenia;Switzerland;0;2;FIFA World Cup qualification;Ljubljana;Slovenia;FALSE;2546;0;0;0
+11.09.12;Switzerland;Albania;2;0;FIFA World Cup qualification;Lucerne;Switzerland;FALSE;2548;0;0;0
+12.10.12;Switzerland;Norway;1;1;FIFA World Cup qualification;Berne;Switzerland;FALSE;2550;0;0;0
+16.10.12;Iceland;Switzerland;0;2;FIFA World Cup qualification;Reykjav√≠k;Iceland;FALSE;2552;0;0;0
+14.11.12;Tunisia;Switzerland;1;2;Friendly;Sousse;Tunisia;FALSE;2559;0;0;0
+06.02.13;Greece;Switzerland;0;0;Friendly;Piraeus;Greece;FALSE;2559;0;0;0
+23.03.13;Cyprus;Switzerland;0;0;FIFA World Cup qualification;Nicosia;Cyprus;FALSE;2563;0;0;0
+08.06.13;Switzerland;Cyprus;1;0;FIFA World Cup qualification;Geneva;Switzerland;FALSE;2564;0;0;0
+14.08.13;Switzerland;Brazil;1;0;Friendly;Basel;Switzerland;FALSE;2566;0;0;0
+06.09.13;Switzerland;Iceland;4;4;FIFA World Cup qualification;Berne;Switzerland;FALSE;2574;0;0;0
+10.09.13;Norway;Switzerland;0;2;FIFA World Cup qualification;Oslo;Norway;FALSE;2576;0;0;0
+11.10.13;Albania;Switzerland;1;2;FIFA World Cup qualification;Tirana;Albania;FALSE;2583;0;0;0
+15.10.13;Switzerland;Slovenia;1;0;FIFA World Cup qualification;Berne;Switzerland;FALSE;2584;0;0;0
+15.11.13;South Korea;Switzerland;2;1;Friendly;Seoul;South Korea;FALSE;2587;0;0;0
+05.03.14;Switzerland;Croatia;2;2;Friendly;St. Gallen;Switzerland;FALSE;2591;0;0;0
+30.05.14;Switzerland;Jamaica;1;0;Friendly;Lucerne;Switzerland;FALSE;2603;0;0;0
+03.06.14;Switzerland;Peru;2;0;Friendly;Lucerne;Switzerland;FALSE;2611;0;0;0
+15.06.14;Switzerland;Ecuador;2;1;FIFA World Cup;Bras√≠lia;Brazil;TRUE;2617;0;0;0
+20.06.14;Switzerland;France;2;5;FIFA World Cup;Salvador;Brazil;TRUE;2624;0;0;0
+25.06.14;Honduras;Switzerland;0;3;FIFA World Cup;Manaus;Brazil;TRUE;2627;0;0;0
+01.07.14;Argentina;Switzerland;1;0;FIFA World Cup;S√£o Paulo;Brazil;TRUE;2628;0;0;0
+08.09.14;Switzerland;England;0;2;UEFA Euro qualification;Basel;Switzerland;FALSE;2630;0;0;0
+09.10.14;Slovenia;Switzerland;1;0;UEFA Euro qualification;Maribor;Slovenia;FALSE;2631;0;0;0
+14.10.14;San Marino;Switzerland;0;4;UEFA Euro qualification;Serravalle;San Marino;FALSE;2635;0;0;0
+15.11.14;Switzerland;Lithuania;4;0;UEFA Euro qualification;St. Gallen;Switzerland;FALSE;2639;0;0;0
+27.03.15;Switzerland;Estonia;3;0;UEFA Euro qualification;Lucerne;Switzerland;FALSE;2642;0;0;0
+31.03.15;Switzerland;United States;1;1;Friendly;Zurich;Switzerland;FALSE;2644;0;0;0
+10.06.15;Switzerland;Liechtenstein;3;0;Friendly;Thun;Switzerland;FALSE;2647;0;0;0
+14.06.15;Lithuania;Switzerland;1;2;UEFA Euro qualification;Vilnius;Lithuania;FALSE;2650;0;0;0
+05.09.15;Switzerland;Slovenia;3;2;UEFA Euro qualification;Basel;Switzerland;FALSE;2656;0;0;0
+08.09.15;England;Switzerland;2;0;UEFA Euro qualification;London;England;FALSE;2658;0;0;0
+09.10.15;Switzerland;San Marino;7;0;UEFA Euro qualification;St. Gallen;Switzerland;FALSE;2665;0;0;0
+12.10.15;Estonia;Switzerland;0;1;UEFA Euro qualification;Tallinn;Estonia;FALSE;2666;0;0;0
+13.11.15;Slovakia;Switzerland;3;2;Friendly;Trnava;Slovakia;FALSE;2671;0;0;0
+17.11.15;Austria;Switzerland;1;2;Friendly;Vienna;Austria;FALSE;2674;0;0;0
+25.03.16;Republic of Ireland;Switzerland;1;0;Friendly;Dublin;Republic of Ireland;FALSE;2675;0;0;0
+29.03.16;Switzerland;Bosnia and Herzegovina;0;2;Friendly;Zurich;Switzerland;FALSE;2677;0;0;0
+28.05.16;Switzerland;Belgium;1;2;Friendly;Geneva;Switzerland;FALSE;2680;0;0;0
+03.06.16;Switzerland;Moldova;2;1;Friendly;Lugano;Switzerland;FALSE;2687;0;0;0
+11.06.16;Albania;Switzerland;0;1;UEFA Euro;Lens;France;TRUE;2688;0;0;0
+15.06.16;Romania;Switzerland;1;1;UEFA Euro;Paris;France;TRUE;2690;0;0;0
+19.06.16;France;Switzerland;0;0;UEFA Euro;Villeneuve-d'Ascq;France;FALSE;2690;0;0;0
+25.06.16;Switzerland;Poland;1;1;UEFA Euro;Saint-√âtienne;France;TRUE;2692;0;0;0
+06.09.16;Switzerland;Portugal;2;0;FIFA World Cup qualification;Basel;Switzerland;FALSE;2699;0;0;0
+07.10.16;Hungary;Switzerland;2;3;FIFA World Cup qualification;Budapest;Hungary;FALSE;2704;0;0;0
+10.10.16;Andorra;Switzerland;1;2;FIFA World Cup qualification;Sant Juli√† de L√≤ria;Andorra;FALSE;2707;0;0;0
+13.11.16;Switzerland;Faroe Islands;2;0;FIFA World Cup qualification;Lucerne;Switzerland;FALSE;2709;0;0;0
+25.03.17;Switzerland;Latvia;1;0;FIFA World Cup qualification;Geneva;Switzerland;FALSE;2710;0;0;0
+01.06.17;Switzerland;Belarus;1;0;Friendly;Neuch√¢tel;Switzerland;FALSE;2711;0;0;0
+09.06.17;Faroe Islands;Switzerland;0;2;FIFA World Cup qualification;T√≥rshavn;Faroe Islands;FALSE;2713;0;0;0
+31.08.17;Switzerland;Andorra;3;0;FIFA World Cup qualification;St. Gallen;Switzerland;FALSE;2716;0;0;0
+03.09.17;Latvia;Switzerland;0;3;FIFA World Cup qualification;Riga;Latvia;FALSE;2719;0;0;0
+07.10.17;Switzerland;Hungary;5;2;FIFA World Cup qualification;Basel;Switzerland;FALSE;2726;0;0;0
+10.10.17;Portugal;Switzerland;2;0;FIFA World Cup qualification;Lisbon;Portugal;FALSE;2732;0;0;0
+09.11.17;Northern Ireland;Switzerland;0;1;FIFA World Cup qualification;Belfast;Northern Ireland;FALSE;2733;0;0;0
+12.11.17;Switzerland;Northern Ireland;0;0;FIFA World Cup qualification;Basel;Switzerland;FALSE;2733;0;0;0
+23.03.18;Greece;Switzerland;0;1;Friendly;Athens;Greece;FALSE;2734;0;0;0
+27.03.18;Switzerland;Panama;6;0;Friendly;Lucerne;Switzerland;FALSE;2747;0;0;0
+03.06.18;Spain;Switzerland;1;1;Friendly;Vila-real;Spain;FALSE;2762;0;0;0
+08.06.18;Switzerland;Japan;2;0;Friendly;Lugano;Switzerland;FALSE;2767;0;0;0
+17.06.18;Brazil;Switzerland;1;1;FIFA World Cup;Rostov-on-Don;Russia;TRUE;2769;0;0;0
+22.06.18;Serbia;Switzerland;1;2;FIFA World Cup;Kaliningrad;Russia;TRUE;2772;0;0;0
+27.06.18;Switzerland;Costa Rica;2;2;FIFA World Cup;Nizhny Novgorod;Russia;TRUE;2776;0;0;0
+03.07.18;Sweden;Switzerland;1;0;FIFA World Cup;Saint Petersburg;Russia;TRUE;2777;0;0;0
+08.09.18;Switzerland;Iceland;6;0;UEFA Nations League;St. Gallen;Switzerland;FALSE;2783;0;0;0
+11.09.18;England;Switzerland;1;0;Friendly;London;England;FALSE;2784;0;0;0
+12.10.18;Belgium;Switzerland;2;1;UEFA Nations League;Brussels;Belgium;FALSE;2787;0;0;0
+15.10.18;Iceland;Switzerland;1;2;UEFA Nations League;Reykjav√≠k;Iceland;FALSE;2790;0;0;0
+14.11.18;Switzerland;Qatar;0;1;Friendly;Lugano;Switzerland;FALSE;2791;0;0;0
+18.11.18;Switzerland;Belgium;5;2;UEFA Nations League;Lucerne;Switzerland;FALSE;2798;0;0;0
+23.03.19;Georgia;Switzerland;0;2;UEFA Euro qualification;Tbilisi;Georgia;FALSE;2800;0;0;0
+26.03.19;Switzerland;Denmark;3;3;UEFA Euro qualification;Basel;Switzerland;FALSE;2806;0;0;0
+05.06.19;Portugal;Switzerland;3;1;UEFA Nations League;Porto;Portugal;FALSE;2810;0;0;0
+09.06.19;Switzerland;England;0;0;UEFA Nations League;Guimar√£es;Portugal;TRUE;2810;0;0;0
+05.09.19;Republic of Ireland;Switzerland;1;1;UEFA Euro qualification;Dublin;Republic of Ireland;FALSE;2812;0;0;0
+08.09.19;Switzerland;Gibraltar;4;0;UEFA Euro qualification;Sion;Switzerland;FALSE;2816;0;0;0
+12.10.19;Denmark;Switzerland;1;0;UEFA Euro qualification;Copenhagen;Denmark;FALSE;2817;0;0;0
+15.10.19;Switzerland;Republic of Ireland;2;0;UEFA Euro qualification;Geneva;Switzerland;FALSE;2819;0;0;0
+15.11.19;Switzerland;Georgia;1;0;UEFA Euro qualification;St. Gallen;Switzerland;FALSE;2820;0;0;0
+18.11.19;Gibraltar;Switzerland;1;6;UEFA Euro qualification;Gibraltar;Gibraltar;FALSE;2827;0;0;0
+03.09.20;Ukraine;Switzerland;2;1;UEFA Nations League;Lviv;Ukraine;FALSE;2830;0;0;0
+06.09.20;Switzerland;Germany;1;1;UEFA Nations League;Basel;Switzerland;FALSE;2832;0;0;0
+07.10.20;Switzerland;Croatia;1;2;Friendly;St. Gallen;Switzerland;FALSE;2835;0;0;0
+10.10.20;Spain;Switzerland;1;0;UEFA Nations League;Madrid;Spain;FALSE;2836;0;0;0
+13.10.20;Germany;Switzerland;3;3;UEFA Nations League;Cologne;Germany;FALSE;2842;0;0;0
+11.11.20;Belgium;Switzerland;2;1;Friendly;Leuven;Belgium;FALSE;2845;0;0;0
+14.11.20;Switzerland;Spain;1;1;UEFA Nations League;Basel;Switzerland;FALSE;2847;0;0;0
+17.11.20;Switzerland;Ukraine;3;0;UEFA Nations League;Lucerne;Switzerland;FALSE;2850;0;0;0
+25.03.21;Bulgaria;Switzerland;1;3;FIFA World Cup qualification;Sofia;Bulgaria;FALSE;2854;0;0;0
+28.03.21;Switzerland;Lithuania;1;0;FIFA World Cup qualification;St. Gallen;Switzerland;FALSE;2855;0;0;0
+31.03.21;Switzerland;Finland;3;2;Friendly;St. Gallen;Switzerland;FALSE;2860;0;0;0
+30.05.21;Switzerland;United States;2;1;Friendly;St. Gallen;Switzerland;FALSE;2863;0;0;0
+03.06.21;Switzerland;Liechtenstein;7;0;Friendly;St. Gallen;Switzerland;FALSE;2870;0;0;0
+12.06.21;Wales;Switzerland;1;1;UEFA Euro;Cardiff;Wales;FALSE;2872;0;0;0
+16.06.21;Italy;Switzerland;3;0;UEFA Euro;Rome;Italy;FALSE;2875;0;0;0
+20.06.21;Switzerland;Turkey;3;1;UEFA Euro;Baku;Azerbaijan;TRUE;2879;0;0;0
+28.06.21;France;Switzerland;3;3;UEFA Euro;Bucharest;Romania;TRUE;2885;0;0;0
+02.07.21;Switzerland;Spain;1;1;UEFA Euro;Saint Petersburg;Russia;TRUE;2887;0;0;0
+01.09.21;Switzerland;Greece;2;1;Friendly;Basel;Switzerland;FALSE;2890;0;0;0
+05.09.21;Switzerland;Italy;0;0;FIFA World Cup qualification;Basel;Switzerland;FALSE;2892;0;0;0
+08.09.21;Northern Ireland;Switzerland;0;0;FIFA World Cup qualification;Belfast;Northern Ireland;FALSE;2892;0;0;0
+09.10.21;Switzerland;Northern Ireland;2;0;FIFA World Cup qualification;Geneva;Switzerland;FALSE;2894;0;0;0
+12.10.21;Lithuania;Switzerland;0;4;FIFA World Cup qualification;Vilnius;Lithuania;FALSE;2898;0;0;0
+12.11.21;Italy;Switzerland;1;1;FIFA World Cup qualification;Rome;Italy;FALSE;2900;0;0;0
+15.11.21;Switzerland;Bulgaria;4;0;FIFA World Cup qualification;Lucerne;Switzerland;FALSE;2904;0;0;0

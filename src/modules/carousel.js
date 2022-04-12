@@ -175,7 +175,7 @@ export default class Carousel {
 		const prevCard = $(`${selector}[data-id="${prevSlideId}"]`, true);
 		const nextCard = $(`${selector}[data-id="${nextSlideId}"]`, true);
 
-		addGoal(this.all_matchs[slideId].goals);
+		this.addGoal(this.all_matchs[slideId].goals);
 		this.setMatchData(prevMatch, prevMatchId, prevCard);
 		this.setMatchData(nextMatch, nextMatchId, nextCard);
 	}
