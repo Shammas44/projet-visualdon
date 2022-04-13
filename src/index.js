@@ -6,6 +6,7 @@ import papaparse from "papaparse";
 import { searchYear, isValidYear } from "./modules/search";
 import { $ } from "./modules/utility";
 import addGoal from "./modules/counter";
+import { foo } from "./modules/timeline";
 
 const entree = document.querySelector("#search-input");
 
@@ -23,6 +24,35 @@ fetch(MATCH_URL)
 			customNextButtonElement: BUTTON_NEXT,
 			customPrevButtonElement: BUTTON_PREV,
 		});
+
+		foo(_all_matchs);
+
+		const currentID = document.querySelector('.splide__slide.is-active').dataset.id
+
+		
+		function getTimeLineMatchs(id, evenNumberofMatch){
+			const tabMatch = []
+
+			const nextIndex = currentID + 1
+
+			for(let i=0; i <= evenNumberofMatch/2 ; i++){
+
+			if(nextIndex >_all_matchs.length -1){
+				currentID = Math.abs((_all_matchs.length - 1) - nextIndex - 1)
+			}
+			tabMatch.push[nextIndex]
+			}
+
+			for(let i=0; i <= evenNumberofMatch/2 ; i++){
+				
+				// A FAIREEEEE// Retourner les 10 match précèdent
+				if(nextIndex < 0){
+					currentID = Math.abs((_all_matchs.length - 1) - nextIndex - 1)
+				}
+				tabMatch.push[nextIndex]
+			}
+
+		}
 
 		entree.addEventListener("input", (event) => {
 			const searchedYear = parseInt(event.target.value);
@@ -72,3 +102,4 @@ function csvToJson(data) {
 	});
 	return parsed_matchs;
 }
+
