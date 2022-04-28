@@ -6,9 +6,34 @@ import papaparse from "papaparse";
 import { searchYear, isValidYear } from "./modules/search";
 import { $ } from "./modules/utility";
 import addGoal from "./modules/counter";
-import { foo } from "./modules/timeline";
+import { buildTimeline } from "./modules/timeline";
 
 const entree = document.querySelector("#search-input");
+function getTimeLineMatchs(array, evenNumberOfMatch, currentId) {
+	const subarray = [];
+	const numberOfMatch = evenNumberOfMatch / 2;
+	let ind;
+	for (let i = 1; i <= numberOfMatch; i++) {
+		ind = currentId + i;
+		if (currentId + i > 0) ind = (currentId + i) % array.length;
+		if (currentId + i == 0) ind = 0;
+		subarray.push(array[ind]);
+	}
+	// not working yet
+	// try sorting each array individually and them concat them
+	for (let i = numberOfMatch; i > 0; i--) {
+		ind = currentId - i;
+		if (currentId - i < 0) ind = array.length - Math.abs(0 - currentId - i);
+		if (currentId - i == !0) ind = 0;
+		subarray.push(array[ind]);
+	}
+	subarray.push(array[currentId]);
+	return subarray.sort((a, b) => {
+		if (a.id < b.id) return -1;
+		if (a.id > b.id) return 1;
+		return 0;
+	});
+}
 
 let _all_matchs = {};
 let _matchsCount;
@@ -25,34 +50,19 @@ fetch(MATCH_URL)
 			customPrevButtonElement: BUTTON_PREV,
 		});
 
-		foo(_all_matchs);
+		let currentId = document.querySelector(".splide__slide.is-active").dataset
+			.id;
+		console.log(getTimeLineMatchs(_all_matchs, 20, 0));
+		buildTimeline(_all_matchs.slice(0, 20), currentId);
 
-		const currentID = document.querySelector('.splide__slide.is-active').dataset.id
-
-		
-		function getTimeLineMatchs(id, evenNumberofMatch){
-			const tabMatch = []
-
-			const nextIndex = currentID + 1
-
-			for(let i=0; i <= evenNumberofMatch/2 ; i++){
-
-			if(nextIndex >_all_matchs.length -1){
-				currentID = Math.abs((_all_matchs.length - 1) - nextIndex - 1)
-			}
-			tabMatch.push[nextIndex]
-			}
-
-			for(let i=0; i <= evenNumberofMatch/2 ; i++){
-				
-				// A FAIREEEEE// Retourner les 10 match précèdent
-				if(nextIndex < 0){
-					currentID = Math.abs((_all_matchs.length - 1) - nextIndex - 1)
-				}
-				tabMatch.push[nextIndex]
-			}
-
-		}
+		// (async function buildTimelineEverySec() {
+		// 	while (true) {
+		// 		await new Promise((resolve) => setTimeout(resolve, 1000));
+		// 		const matchs = getTimeLineMatchs(_all_matchs, 20, currentId);
+		// 		buildTimeline(matchs, currentId);
+		// 		currentId++;
+		// 	}
+		// })();
 
 		entree.addEventListener("input", (event) => {
 			const searchedYear = parseInt(event.target.value);
@@ -102,4 +112,3 @@ function csvToJson(data) {
 	});
 	return parsed_matchs;
 }
-

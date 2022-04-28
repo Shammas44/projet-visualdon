@@ -17,5 +17,3 @@ export function searchYear(year) {
 export function isValidYear(year) {
 	return year >= ANNEEDEBUT && year <= ANNEEFIN ? true : false;
 }
-
-export function trieDonnee(carousel) {}

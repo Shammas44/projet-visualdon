@@ -4,16 +4,16 @@ $victory = 0
 $defeat = 0
 $egality = 0
 $_goals = 0
+$id = 0
 
 Foreach ($match in $matchs) {
-    #$dateUnits = $match.date.split('-')
-    #$dateString = $dateUnits[1] + '.' + $dateUnits[0] + '.' + $dateUnits[2]
-    #$match.date = [DateTime]$dateString | get-date -Format dd.MM.yyyy
     $home_team = $match.home_team
     $away_team = $match.away_team
     $away_score = $match.away_score
     $home_score = $match.home_score
     if (($home_team -eq 'Switzerland') -or ($away_team -eq 'Switzerland')) {
+        $match.id = $id
+        $id++
         
         if ($home_team -eq 'Switzerland') {
             $_goals += $home_score
