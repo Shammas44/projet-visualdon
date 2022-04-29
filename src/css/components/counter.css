@@ -78,34 +78,40 @@
   transform: translateY(0);
 }
 
+
+/**Bordure extérieur du compteur**/
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-car {
-  border-radius: 0.34em;
+  border-radius: 0.40em;      /**Par défaut:  0.34**/  
   font-family: "Arimo", monospace;
   padding: 0.15em;
-  background: #000;
+  background: rgb(0, 0, 0);
   color: #eee0d3;
 }
 
+/**Intérieur de la bordure**/
 .odometer.odometer-auto-theme .odometer-digit,
 .odometer.odometer-theme-car .odometer-digit {
-  box-shadow: inset 0 0 0.3em rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0.3em rgba(0, 0, 0, 0.8);  /**Par défaut: noir**/
   background-image: linear-gradient(to bottom, #333333 0%, #333333 40%, #101010 60%, #333333 80%, #333333 100%);
   padding: 0 0.15em;
 }
+
 
 .odometer.odometer-auto-theme .odometer-digit:first-child,
 .odometer.odometer-theme-car .odometer-digit:first-child {
   border-radius: 0.2em 0 0 0.2em;
 }
 
+
+/**Ombre à l'intérieur**/
 .odometer.odometer-auto-theme .odometer-digit:last-child,
 .odometer.odometer-theme-car .odometer-digit:last-child {
 
   border-radius: 0 0.2em 0.2em 0;
   background-size: 100%;
   background-image: linear-gradient(to bottom, #eee0d3 0%, #eee0d3 40%, #bbaa9a 60%, #eee0d3 80%, #eee0d3 100%);
-  background-color: #eee0d3;
+  background-color: #d4d3ee;
   color: #001;
 }
 

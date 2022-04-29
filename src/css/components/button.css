@@ -1,0 +1,44 @@
+.button {
+
+  border-radius: 8px;    /**Par défaut:  0.34**/  
+  font-family: "Arimo", monospace;
+  padding: 0.10em;
+  background: rgb(255, 0, 0);
+  border:2px;
+  box-shadow: rgba(0, 0, 0, 0.50) 0px 1px 4px;
+  color: #ffffff;
+  
+}
+
+
+.button:hover{
+    background-color: rgba(255, 0, 0, 0.1) !important;
+    color: rgb(255, 0, 0);
+  }
+  .button span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .button:before,
+  .button:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+  .button:before {
+    height: 0%;
+    width: 2px;
+    
+  }
+
+  .button:after {
+    width: 0%;
+    height: 2px;
+    
+  }
+  

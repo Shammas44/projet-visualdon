@@ -2,4 +2,5 @@
 @import url("./components/carousel.css");
 @import url("./components/counter.css");
 @import url("./components/searchInput.css");
+@import url("./components/button.css");
 @import url("/node_modules/@splidejs/splide/dist/css/splide-core.min.css");
