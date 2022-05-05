@@ -1,6 +1,29 @@
 #odometer {
-  margin: 0 auto;
+  position: relative;
 }
+
+.wrapper--odometer {
+  background-color: black;
+  color: white;
+  width: fit-content;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  border-radius: 9.6px;
+  font-size: 1rem;
+}
+
+/* #odometer::before { */
+/*   font-size: 0.8rem; */
+/*   text-align: center; */
+/*   color: black; */
+/*   top: -1rem; */
+/*   left: -50px; */
+/*   z-index: 30; */
+/*   width: 100%; */
+/*   content: "Compteur de goals de la suisse"; */
+/*   position: absolute; */
+/*   white-space: nowrap; */
+/* } */
 
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-car {
@@ -82,7 +105,8 @@
 /**Bordure extérieur du compteur**/
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-car {
-  border-radius: 0.40em;      /**Par défaut:  0.34**/  
+  border-radius: 0.40em;
+  /**Par défaut:  0.34**/
   font-family: "Arimo", monospace;
   padding: 0.15em;
   background: rgb(0, 0, 0);
@@ -92,7 +116,8 @@
 /**Intérieur de la bordure**/
 .odometer.odometer-auto-theme .odometer-digit,
 .odometer.odometer-theme-car .odometer-digit {
-  box-shadow: inset 0 0 0.3em rgba(0, 0, 0, 0.8);  /**Par défaut: noir**/
+  box-shadow: inset 0 0 0.3em rgba(0, 0, 0, 0.8);
+  /**Par défaut: noir**/
   background-image: linear-gradient(to bottom, #333333 0%, #333333 40%, #101010 60%, #333333 80%, #333333 100%);
   padding: 0 0.15em;
 }

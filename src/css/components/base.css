@@ -2,3 +2,42 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+:root {
+    --h1-height: 80px;
+}
+
+h1 {
+    text-align: center;
+    padding: 0 20%;
+    height: var(--h1-height);
+    font-size: 1.5rem;
+    z-index: 30;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin: auto 0 0 auto;
+    width: 100%;
+    padding: 0 10%;
+    font-size: 0.8rem;
+}
+
+footer * {
+    justify-content: center;
+    text-align: center;
+}
+
+.info {
+    color: rgba(255, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 1em;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        padding: 0 10%;
+        font-size: 1.2rem;
+    }
+}

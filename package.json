@@ -21,6 +21,7 @@
     "@egstad/detect-scroll": "^1.0.10",
     "@splidejs/splide": "^3.6.12",
     "d3": "^7.3.0",
+    "loadash": "^1.0.0",
     "papaparse": "^5.3.2"
   }
 }

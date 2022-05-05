@@ -22,14 +22,9 @@ export default class Carousel {
 		this.carouselProperty = { size: 3 };
 		this.all_matchs = matchs;
 		this.addGoal = addGoal;
-		this.carouselProperty.startIndex = this.isOddNumber(
-			this.carouselProperty.size
-		)
-			? Math.floor(this.carouselProperty.size / 2)
-			: (() => {
-					throw new Error("la taille du carousel doit être impaire");
-			  })();
-		const defaultMatch = matchs.slice(0, this.carouselProperty.size);
+		this.carouselProperty.startIndex = 0;
+		// const defaultMatch = matchs.slice(0, this.carouselProperty.size);
+		const defaultMatch = [matchs[0], matchs[1], matchs[matchs.length - 1]];
 		this.buildMatch(defaultMatch);
 		this.createCarousel(options);
 	}
@@ -45,7 +40,7 @@ export default class Carousel {
 			const match_wrapper = carousel_item.cloneNode(true);
 			WRAPPER.appendChild(match_wrapper);
 			const updated_match_wrapper = WRAPPER.querySelector("li:last-of-type");
-			this.setMatchData(match, key, updated_match_wrapper);
+			this.setMatchData(match, updated_match_wrapper);
 		});
 		this.addGoal(this.all_matchs[this.carouselProperty.startIndex].goals);
 	}
@@ -115,22 +110,31 @@ export default class Carousel {
 	 * @param matchId - The id of the match.
 	 * @param matchElements - The elements that will be updated.
 	 */
-	setMatchData(match, matchId, matchElements) {
+	setMatchData(match, matchElements) {
 		const setter = (element) => {
-			const away_country_code = match.away_team_code.toLowerCase();
-			const home_country_code = match.home_team_code.toLowerCase();
+			const away_country_code = match.away_team_code?.toLowerCase();
+			const home_country_code = match.home_team_code?.toLowerCase();
 			const score = `${match.home_score}-${match.away_score}`;
-			const tournament = match.tournament + ` ${match.goals}`;
+			const tournament = match.tournament + ` ${match.id}`;
 			const away_style = `background-image: url(${FLAG_URL}${away_country_code}.png);`;
 			const home_style = `background-image: url(${FLAG_URL}${home_country_code}.png);`;
 			const victory = this.isVictory(match);
 			const match_card = element.querySelector(".carousel__item-body");
+			const winRate = parseInt(match.victory).toFixed(1) + "%";
+			const defeatRate = parseInt(match.defeat).toFixed(1) + "%";
+			const egalityRate = parseInt(match.egality).toFixed(1) + "%";
 
 			element.querySelector(".flag--home").setAttribute("style", home_style);
 			element.querySelector(".flag--away").setAttribute("style", away_style);
 			element.querySelector(".event-name").textContent = tournament;
 			element.querySelector(".score").textContent = score;
-			element.setAttribute("data-Id", matchId);
+			element.querySelector(".stat--victory .stat--number").textContent =
+				winRate;
+			element.querySelector(".stat--defeat .stat--number").textContent =
+				defeatRate;
+			element.querySelector(".stat--egality .stat--number").textContent =
+				egalityRate;
+			element.setAttribute("data-Id", match.id);
 
 			if (victory) {
 				match_card.classList.remove("defeat");
@@ -176,8 +180,8 @@ export default class Carousel {
 		const nextCard = $(`${selector}[data-id="${nextSlideId}"]`, true);
 
 		this.addGoal(this.all_matchs[slideId].goals);
-		this.setMatchData(prevMatch, prevMatchId, prevCard);
-		this.setMatchData(nextMatch, nextMatchId, nextCard);
+		this.setMatchData(prevMatch, prevCard);
+		this.setMatchData(nextMatch, nextCard);
 	}
 
 	/**
@@ -192,14 +196,5 @@ export default class Carousel {
 		if ((victory && is_switzerland) || (!victory && !is_switzerland))
 			return true;
 		return false;
-	}
-
-	/**
-	 * Given a number, return true if the number is odd, false if the number is even
-	 * @param number - The number to check.
-	 * @returns The value of the expression parseInt(number) % 2 != 0 ? true : false;
-	 */
-	isOddNumber(number) {
-		return parseInt(number) % 2 != 0 ? true : false;
 	}
 }

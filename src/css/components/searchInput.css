@@ -1,7 +1,29 @@
 .wrapper--search-input {
-    margin: 0 auto;
+    display: flex;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 7.2px;
+    font-size: 1rem;
+    border-radius: 9.6px;
+}
+
+label {
+    padding: 0 0.5rem 0 0;
 }
 
 #search-input {
     order: 10;
+    width: 100%;
+    border-radius: 9.6px;
+    font-size: 2rem;
+    border: none;
+    width: max-content;
+    background-image: linear-gradient(to bottom, #eee0d3 0%, #eee0d3 40%, #bbaa9a 60%, #eee0d3 80%, #eee0d3 100%);
+    background-color: #d4d3ee;
+    box-shadow: inset 0 0 0.3em rgb(0 0 0 / 80%);
+    color: #001;
+    height: 58.8px;
 }
