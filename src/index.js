@@ -23,9 +23,10 @@ fetch(MATCH_URL)
 		return response.text();
 	})
 	.then(function (data) {
-		const parsed_data = csvToJson(data).data;
-		_all_matchs = parsed_data;
-		const carousel = new Carousel(parsed_data, addGoal, {
+		const parsed_data = csvToJson(data);
+		_all_matchs = parsed_data.data;
+		const startingIndexes = [_all_matchs.length - 1, 0, 1];
+		const carousel = new Carousel(_all_matchs, addGoal, startingIndexes, {
 			customNextButtonElement: BUTTON_NEXT,
 			customPrevButtonElement: BUTTON_PREV,
 		});
@@ -33,18 +34,18 @@ fetch(MATCH_URL)
 		BUTTON_NEXT.addEventListener("click", () => {
 			_id.id = _id.id + 1 > _all_matchs.length - 1 ? 0 : _id.id + 1;
 			buildTimeline(getTimeLineMatchs(_all_matchs, 20, _id.id), _id.id);
-			entree.value = _all_matchs[_id.id].date.split("-")[0];
-			console.log("button next " + _id.id);
+			const year = _all_matchs[_id.id].date.split("-")[0];
+			entree.value = year;
 		});
 		BUTTON_PREV.addEventListener("click", () => {
 			_id.id = _id.id - 1 < 0 ? _all_matchs.length - 1 : _id.id - 1;
 			buildTimeline(getTimeLineMatchs(_all_matchs, 20, _id.id), _id.id);
-			entree.value = _all_matchs[_id.id].date.split("-")[0];
-			console.log("button prev  " + _id.id);
+			const year = _all_matchs[_id.id].date.split("-")[0];
+			entree.value = year;
 		});
 
 		buildTimeline(getTimeLineMatchs(_all_matchs, 20, _id.id), _id.id);
-		setSearchEvent(carousel, parsed_data, _all_matchs);
+		setSearchEvent(_all_matchs);
 	})
 	.catch(function (error) {
 		console.log(error);

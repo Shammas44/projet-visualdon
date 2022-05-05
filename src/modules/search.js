@@ -1,23 +1,13 @@
 import { nth } from "lodash";
 import addGoal from "./counter";
 import { buildTimeline } from "./timeline";
-import { $ } from "./utility";
 import { _id } from "..";
+import Carousel from "./carousel";
+import { BUTTON_NEXT, BUTTON_PREV, WRAPPER } from "./config";
 const ANNEEDEBUT = 1905;
 const ANNEEFIN = 2021;
 const entree = document.querySelector("#search-input");
 const info = document.querySelector(".info");
-
-export function searchYear(year) {
-	const valeur = document.querySelector("text");
-
-	if (year >= ANNEEDEBUT && year <= ANNEEFIN) {
-		valeur.innerText = "Recherche réussie";
-	} else {
-		valeur.innerText =
-			"Aucun résultat - La recherche peut être faite que entre les années 1905 et 2021";
-	}
-}
 
 export function isValidYear(year) {
 	return year >= ANNEEDEBUT && year <= ANNEEFIN ? true : false;
@@ -40,53 +30,62 @@ export function getTimeLineMatchs(array, evenNumberOfMatch, currentId) {
 				: ind + 1;
 		subarray.push(array[ind]);
 	}
-	console.log(subarray, currentId);
+	console.log({ subarray }, { currentId });
 	return subarray;
 }
 
-export function setSearchEvent(carousel, parsed_data, all_matchs) {
+export function doesMatchesExist(searchedYear, parsed_data) {
+	let i = 0;
+	let message = "";
+	const keepSearching = (index, target) => {
+		const year = parseInt(parsed_data[index].date.split("-")[0]);
+		const notInArray = year > target ? true : false;
+		message = notInArray
+			? "<p>Il n'y a pas de matchs pour cette année</p>"
+			: "";
+		const boolean = year == target || year > target ? false : true;
+		return boolean;
+	};
+
+	while (keepSearching(i, searchedYear)) {
+		i++;
+	}
+	return { message, i };
+}
+
+export function setSearchEvent(all_matchs) {
 	entree.addEventListener("input", (event) => {
 		const searchedYear = parseInt(event.target.value);
-		const matchsCount = parsed_data.length - 1;
+		const matchsCount = all_matchs.length - 1;
 		if (isValidYear(searchedYear)) {
-			let i = 0;
-
-			const keepSearching = (index, target) => {
-				const year = parseInt(parsed_data[index].date.split("-")[0]);
-				const boolean = year == target || year > target ? false : true;
-				return boolean;
-			};
-
-			while (keepSearching(i, searchedYear)) {
-				i++;
-			}
-
+			const { message, i } = doesMatchesExist(searchedYear, all_matchs);
 			const activeIndex = i;
-			console.log({ activeIndex });
 			const prevIndex = activeIndex - 1 < 0 ? matchsCount : activeIndex - 1;
 			const nextIndex = activeIndex + 1 > matchsCount ? 0 : activeIndex + 1;
-
-			const prevMatch = all_matchs[prevIndex];
-			const activeMatch = all_matchs[activeIndex];
-			const nextMatch = all_matchs[nextIndex];
-
-			const prevMatchHtml = $(".splide__slide.is-prev");
-			const activeMatchHtml = $(".splide__slide.is-active");
-			const nextMatchHtml = $(".splide__slide.is-next");
-
-			carousel.setMatchData(prevMatch, prevMatchHtml);
-			carousel.setMatchData(activeMatch, activeMatchHtml);
-			carousel.setMatchData(nextMatch, nextMatchHtml);
-			addGoal(all_matchs[activeIndex].goals);
+			// document.querySelectorAll("li[data-id]").forEach((li) => {
+			// 	li.remove();
+			// });
+			const wrapper = document.querySelector(".wrapper--carousel");
+			const template = document
+				.querySelector(".carousel-template")
+				.content.cloneNode(true);
+			wrapper.innerHTML = "";
+			wrapper.appendChild(template);
+			WRAPPER.item = document.querySelector(".splide__list");
+			const startingIndexes = [prevIndex, activeIndex, nextIndex];
+			const carousel = new Carousel(all_matchs, addGoal, startingIndexes, {
+				customNextButtonElement: BUTTON_NEXT,
+				customPrevButtonElement: BUTTON_PREV,
+			});
 			buildTimeline(
 				getTimeLineMatchs(all_matchs, 20, activeIndex),
 				activeIndex
 			);
+			addGoal(all_matchs[activeIndex].goals);
 			_id.id = activeIndex;
-			info.innerHTML = "";
+			info.innerHTML = message;
 		} else {
-			info.innerHTML =
-				"<p>L'année doit être comprise entre <b>1905 et 2021</b></p>";
+			info.innerHTML = `<p>L'année doit être comprise entre <b>${ANNEEDEBUT} et ${ANNEEFIN}</b></p`;
 		}
 	});
 }

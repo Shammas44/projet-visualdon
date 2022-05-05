@@ -11,21 +11,22 @@ export default class Carousel {
 	 *
 	 * It creates a carousel property object with the following properties:
 	 *
-	 * - size: the number of matchs to display in the carousel
 	 * - startIndex: the index of the first match to display in the carousel
 	 *
 	 * It creates a default match array with the first size matchs of the matchs array
 	 * @param matchs - an array of matchs
 	 * @param options - an object that contains the following properties:
 	 */
-	constructor(matchs, addGoal, options) {
-		this.carouselProperty = { size: 3 };
+	constructor(matchs, addGoal, startingIndexes, options) {
 		this.all_matchs = matchs;
 		this.addGoal = addGoal;
+		this.carouselProperty = {};
 		this.carouselProperty.startIndex = 0;
-		// const defaultMatch = matchs.slice(0, this.carouselProperty.size);
-		const defaultMatch = [matchs[0], matchs[1], matchs[matchs.length - 1]];
-		this.buildMatch(defaultMatch);
+		this.buildMatch([
+			matchs[startingIndexes[1]],
+			matchs[startingIndexes[2]],
+			matchs[startingIndexes[0]],
+		]);
 		this.createCarousel(options);
 	}
 
@@ -38,8 +39,10 @@ export default class Carousel {
 		const carousel_item = document.querySelector(".match--card").content;
 		small_chunk.forEach((match, key) => {
 			const match_wrapper = carousel_item.cloneNode(true);
-			WRAPPER.appendChild(match_wrapper);
-			const updated_match_wrapper = WRAPPER.querySelector("li:last-of-type");
+			console.log({ match_wrapper });
+			WRAPPER.item.appendChild(match_wrapper);
+			const updated_match_wrapper =
+				WRAPPER.item.querySelector("li:last-of-type");
 			this.setMatchData(match, updated_match_wrapper);
 		});
 		this.addGoal(this.all_matchs[this.carouselProperty.startIndex].goals);
@@ -115,7 +118,9 @@ export default class Carousel {
 			const away_country_code = match.away_team_code?.toLowerCase();
 			const home_country_code = match.home_team_code?.toLowerCase();
 			const score = `${match.home_score}-${match.away_score}`;
-			const tournament = match.tournament + ` ${match.id}`;
+			const tournament = match.tournament;
+			let date = match.date.split("-");
+			date = `${date[2]}/${date[1]}/${date[0]}`;
 			const away_style = `background-image: url(${FLAG_URL}${away_country_code}.png);`;
 			const home_style = `background-image: url(${FLAG_URL}${home_country_code}.png);`;
 			const victory = this.isVictory(match);
@@ -123,17 +128,16 @@ export default class Carousel {
 			const winRate = parseInt(match.victory).toFixed(1) + "%";
 			const defeatRate = parseInt(match.defeat).toFixed(1) + "%";
 			const egalityRate = parseInt(match.egality).toFixed(1) + "%";
+			const statSelector = (state) => `.stat--${state} .stat--number`;
 
 			element.querySelector(".flag--home").setAttribute("style", home_style);
 			element.querySelector(".flag--away").setAttribute("style", away_style);
 			element.querySelector(".event-name").textContent = tournament;
 			element.querySelector(".score").textContent = score;
-			element.querySelector(".stat--victory .stat--number").textContent =
-				winRate;
-			element.querySelector(".stat--defeat .stat--number").textContent =
-				defeatRate;
-			element.querySelector(".stat--egality .stat--number").textContent =
-				egalityRate;
+			element.querySelector(".date").textContent = date;
+			element.querySelector(statSelector("victory")).textContent = winRate;
+			element.querySelector(statSelector("defeat")).textContent = defeatRate;
+			element.querySelector(statSelector("egality")).textContent = egalityRate;
 			element.setAttribute("data-Id", match.id);
 
 			if (victory) {
