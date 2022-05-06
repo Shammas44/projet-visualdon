@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons" />
+    <script src="main.js" type="module" defer></script>
+
+</head>
+
+<body>
+    <h1>Matchs de football de l'équipe de Suisse de 1905 à 2021</h1>
+
+    <!--==================================-->
+    <!-- Buttons -->
+    <!--==================================-->
+    <div class="wrapper wrapper--button">
+        <button class="button button--prev material-icons">arrow_left</button>
+        <button class="button button--next material-icons">arrow_right</button>
+    </div>
+    <!--==================================-->
+    <!-- Carousel -->
+    <!--==================================-->
+    <div class="wrapper wrapper--carousel">
+        <div class="splide carousel">
+
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                    <template class="match--card">
+                        <li class="splide__slide">
+                            <div class="carousel__item-body">
+                                <p class="title event-name">Event Name</p>
+                                <p class="date">Date</p>
+                                <div class="wrapper--score">
+                                    <div class="flag flag--home"></div>
+                                    <p class="score">0-0</p>
+                                    <div class="flag flag--away"></div>
+                                </div>
+
+                                <div class="wrapper wrapper--stat">
+                                    <p class="stat stat--victory"><span>Victoire: </span><span
+                                            class="stat--number"></span></p>
+                                    <p class="stat stat--defeat"><span>Défaite: </span><span
+                                            class="stat--number"></span></p>
+                                    <p class="stat stat--egality"><span>Egalité: </span><span
+                                            class="stat--number"></span></p>
+                                </div>
+
+                            </div>
+                        </li>
+                    </template>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="wrapper wrapper--nav">
+
+
+        <!--==================================-->
+        <!-- Search -->
+        <!--==================================-->
+
+        <div class="wrapper--search-input">
+            <label for="search-input">Année</label>
+            <input id="search-input" type="number" min="1905" max="2021" step="1" value="1905" />
+        </div>
+
+        <!--==================================-->
+        <!-- Counter -->
+        <!--==================================-->
+        <div class="wrapper wrapper--odometer">
+            <p>Buts Suisses</p>
+            <div id="odometer" class="odometer odometer-auto-theme">
+                <div class="odometer-inside"><span class="odometer-digit">
+                        <span class="odometer-digit-spacer">
+                            0
+                        </span>
+                        <span class="odometer-digit-inner">
+                            <span class="odometer-ribbon">
+                                <span class="odometer-ribbon-inner">
+                                    <span id="yo" class="odometer-value">
+                                        0
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="odometer-digit">
+                        <span class="odometer-digit-spacer">
+                            0
+                        </span>
+                        <span class="odometer-digit-inner">
+                            <span class="odometer-ribbon">
+                                <span class="odometer-ribbon-inner">
+                                    <span class="odometer-value">
+                                        0
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class="odometer-digit">
+                        <span class="odometer-digit-spacer">
+                            0
+                        </span>
+                        <span class="odometer-digit-inner">
+                            <span class="odometer-ribbon">
+                                <span class="odometer-ribbon-inner">
+                                    <span class="odometer-value">
+                                        0
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="info"></div>
+    <div class="wrapper wrapper--svg">
+        <svg id="svg"></svg>
+    </div>
+    <footer>
+        <p>Par Sandro Picciola et Sébastien Traber, mai 2022,
+            <span>
+                <a
+                    href="https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017?select=results.csv">
+                    source des données
+                </a>
+            </span>
+        </p>
+    </footer>
+
+    <template class="carousel-template">
+        <div class="splide carousel">
+
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                    <template class="match--card">
+                        <li class="splide__slide">
+                            <div class="carousel__item-body">
+                                <p class="title event-name">Event Name</p>
+                                <p class="date">Date</p>
+                                <div class="wrapper--score">
+                                    <div class="flag flag--home"></div>
+                                    <p class="score">0-0</p>
+                                    <div class="flag flag--away"></div>
+                                </div>
+
+                                <div class="wrapper wrapper--stat">
+                                    <p class="stat stat--victory"><span>Victoire: </span><span
+                                            class="stat--number"></span></p>
+                                    <p class="stat stat--defeat"><span>Défaite: </span><span
+                                            class="stat--number"></span></p>
+                                    <p class="stat stat--egality"><span>Egalité: </span><span
+                                            class="stat--number"></span></p>
+                                </div>
+
+                            </div>
+                        </li>
+                    </template>
+
+                </ul>
+            </div>
+
+        </div>
+    </template>
+
+    <style>
+        #svg {
+            transform: scaleY(-1)
+        }
+    </style>
+
+</body>
+
+</html>
