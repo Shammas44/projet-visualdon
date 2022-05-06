@@ -8,6 +8,7 @@
     padding: 7.2px;
     font-size: 1rem;
     border-radius: 9.6px;
+    height: 100%;
 }
 
 label {
@@ -26,5 +27,4 @@ label {
     background-color: #d4d3ee;
     box-shadow: inset 0 0 0.3em rgb(0 0 0 / 80%);
     color: #001;
-    height: 58.8px;
 }
