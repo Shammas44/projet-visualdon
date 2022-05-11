@@ -2,6 +2,8 @@
 
 Réalisé par Sandro Picciola et Sébastien Traber
 
+Le Projet est disponible sur [sebastientraber.com](https://sebastientraber.com/football/)
+
 ## Context
 
 Le jeu de données utilisé recense les résultats des matchs de football internationaux réalisé entre 1872 et 2021. Elles vienennt du site Kaggle et sont réalisé et mise à jour par plusieur contributeurs dont le principal est Mart Jürisoo.
